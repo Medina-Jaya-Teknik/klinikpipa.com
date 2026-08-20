@@ -108,7 +108,7 @@ export function generateServiceSchema(serviceName?: string, serviceDesc?: string
     offers: {
       "@type": "Offer",
       priceCurrency: "IDR",
-      price: "200000",
+      price: "300000",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
     },

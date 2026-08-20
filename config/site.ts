@@ -37,7 +37,7 @@ export const siteConfig = {
     },
   },
   openingHours: "Mo-Su 00:00-23:59",
-  priceRange: "Rp200.000 - Rp750.000",
+  priceRange: "Rp300.000 - Rp1.500.000+",
   rating: {
     ratingValue: "4.9",
     reviewCount: "412",
@@ -108,27 +108,27 @@ export const siteConfig = {
   services: [
     {
       id: "deteksi-pipa-bocor",
-      name: "Deteksi Kebocoran Pipa Tersembunyi",
-      shortDesc: "Pelacakan akurat titik pipa bocor di dalam dinding/lantai menggunakan sensor geofon akustik & thermal imaging.",
+      name: "Deteksi Kebocoran Pipa & Perbaikan",
+      shortDesc: "Pelacakan akurat titik pipa bocor di dalam dinding/lantai menggunakan sensor geofon akustik & thermal imaging beserta perbaikan.",
       fullDesc:
-        "Tagihan air melonjak atau tembok sering rembes? Kami melacak posisi pasti pipa bocor halus yang tertanam di bawah lantai beton atau dinding tanpa perlu membongkar sembarangan.",
+        "Tagihan air melonjak atau tembok sering rembes? Kami melacak posisi pasti pipa bocor halus yang tertanam di bawah lantai beton atau dinding tanpa perlu membongkar sembarangan beserta pengerjaan perbaikan presisi.",
       iconName: "FaSearchLocation",
-      price: "Mulai Rp350.000",
+      price: "Mulai Rp1.500.000",
       features: [
         "Teknologi Acoustic Leak Locator & Thermal Camera",
         "Akurasi titik bocor hingga 99%",
-        "Tanpa pembongkaran lantai/dinding secara acak",
+        "Layanan perbaikan & penambalan pipa bocor",
         "Laporan posisi titik kerusakan presisi",
       ],
     },
     {
       id: "detox-pipa-kotor",
-      name: "Detox & Pencucian Pipa Air Bersih",
+      name: "Cuci Detox Pipa Air Bersih",
       shortDesc: "Pembersihan total kerak hitam, bio-film, lumpur, & cacing di dalam jalur pipa air minum/keran rumah.",
       fullDesc:
         "Air keran keruh, kuning, berbau, atau mengalir kecil? Metode Hydro Flushing Pressure Detox membersihkan seluruh kerak dan kuman yang mengendap di sepanjang pipa air bersih Anda secara aman.",
       iconName: "FaBroom",
-      price: "Mulai Rp300.000",
+      price: "Mulai Rp1.000.000",
       features: [
         "Pembersihan kerak & bio-film cacing tanpa kimia berbahaya",
         "Teknologi Hydro Pressure Flushing modern",
@@ -143,7 +143,7 @@ export const siteConfig = {
       fullDesc:
         "Memvisualisasikan kondisi riil bagian dalam pipa buangan maupun air bersih secara real-time. Mengetahui posisi sumbatan keras, patahan pipa, atau pergeseran sambungan elbow.",
       iconName: "FaEye",
-      price: "Mulai Rp250.000",
+      price: "Mulai Rp300.000",
       features: [
         "Kamera kabel flexible HD waterproof",
         "Layar monitor langsung di lokasi",
@@ -153,12 +153,12 @@ export const siteConfig = {
     },
     {
       id: "pelancaran-saluran-mampet",
-      name: "Pelancaran Saluran Mampet Rigid Cable",
+      name: "Pelancaran & Perbaikan Saluran Mampet",
       shortDesc: "Pelancaran pipa wastafel, WC, got, dan floor drain mampet menggunakan kawat spiral fleksibel bertenaga tinggi.",
       fullDesc:
         "Pembersihan sumbatan lemak keras, rambut, dan sampah padat pada saluran air buangan dengan mesin spiral fleksibel profesional tanpa merusak pipa PVC.",
       iconName: "FaTools",
-      price: "Mulai Rp200.000",
+      price: "Mulai Rp300.000",
       features: [
         "Mengikis lemak & sumbatan tanpa bongkar keramik",
         "Mesin Spiral Heavy-Duty bertenaga tinggi",

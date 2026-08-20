@@ -25,9 +25,9 @@ const defaultFaqs: FAQItem[] = [
       "Sangat aman. Tekanan hydro flushing disesuaikan secara presisi dengan spesifikasi ketahanan pipa PVC atau besi galvanis sehingga tidak akan merusak sambungan atau memecahkan pipa.",
   },
   {
-    question: "Berapa biaya jasa deteksi pipa bocor & detox pipa di Bandung?",
+    question: "Berapa biaya jasa deteksi pipa bocor, detox pipa, & pelancaran mampet di Bandung?",
     answer:
-      "Biaya layanan deteksi pipa bocor mulai Rp350.000 dan pencucian detox pipa mulai Rp300.000 tergantung panjang jalur pipa dan tingkat kesulitan. Estimasi transparan selalu diinfokan di awal.",
+      "Biaya perbaikan saluran mampet mulai Rp300.000, cuci detox pipa air bersih mulai Rp1.000.000, dan deteksi pipa bocor beserta perbaikan mulai Rp1.500.000 tergantung tingkat kesulitan & lokasi. Estimasi transparan selalu diinfokan di awal.",
   },
   {
     question: "Apakah layanan deteksi & detox pipa ini bergaransi?",

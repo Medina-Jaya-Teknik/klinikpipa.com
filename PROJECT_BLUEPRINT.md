@@ -136,7 +136,7 @@ export const siteConfig = {
     country: "ID",
     geo: { latitude: -6.8928, longitude: 107.5959 }
   },
-  priceRange: "Rp150.000 - Rp500.000",
+  priceRange: "Rp300.000 - Rp1.500.000+",
   areas: [
     { slug: "bandung", name: "Bandung" },
     { slug: "sukajadi", name: "Sukajadi" },
