@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { FaPhoneAlt, FaWhatsapp, FaWrench, FaBars, FaTimes } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,17 +42,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
-            <FaWrench className="text-xl" />
-          </div>
-          <div>
-            <span className="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight flex items-center gap-1.5">
-              {siteConfig.name}
-            </span>
-            <span className="block text-xs text-sky-600 font-semibold tracking-wider uppercase">
-              Solusi Pipa Bocor, Kotor & Mampet
-            </span>
-          </div>
+          <Image
+            src="/logo-transparent.png"
+            alt={`${siteConfig.name} - ${siteConfig.tagline}`}
+            width={220}
+            height={65}
+            className="h-10 sm:h-12 md:h-13 w-auto object-contain group-hover:scale-105 transition-transform"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation Menu */}

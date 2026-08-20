@@ -9,7 +9,7 @@ Dokumen ini berisi rangkuman teknis lengkap, arsitektur SEO, komponen UI, serta 
 * **Nama Business / Brand**: Klinik Pipa — Solusi Pipa Bocor, Pipa Kotor dan Pipa Mampet
 * **Domain Utama**: `klinikpipa.com`
 * **Niche**: Jasa Saluran Mampet, Perbaikan WC Tersumbat, Pembersihan Pipa, Sedot Grease Trap Restoran (Local Service / Plumbing Services).
-* **Target Utama (Conversion Goal)**: Menghasilkan *lead* langsung melalui **WhatsApp** (`0851-2277-7253`) & Telepon.
+* **Target Utama (Conversion Goal)**: Menghasilkan *lead* langsung melalui **WhatsApp** (`+62 898-9890-071`) & Telepon.
 * **Strategi Pemasaran**: Local SEO Dominance (Targeting area Kota Bandung & Kecamatan/Kelurahan di sekitarnya) & Content Marketing (Blog).
 
 ---
@@ -126,15 +126,15 @@ export const siteConfig = {
   name: "Klinik Pipa",
   tagline: "Solusi pipa bocor, pipa kotor dan pipa mampet",
   domain: "https://klinikpipa.com",
-  phone: "0851-2277-7253",
-  whatsappNumber: "6285122777253",
+  phone: "+62 898-9890-071",
+  whatsappNumber: "628989890071",
   address: {
-    street: "Jl. Baladewa No.114, Pamoyanan, Kec. Cicendo",
-    city: "Bandung",
+    street: "Jl. Cibarengkok RT/RW 09/04, Kel. Sukabungah, Kec. Sukajadi",
+    city: "Kota Bandung",
     province: "Jawa Barat",
-    postalCode: "40173",
+    postalCode: "40162",
     country: "ID",
-    geo: { latitude: -6.9175, longitude: 107.6191 }
+    geo: { latitude: -6.8928, longitude: 107.5959 }
   },
   priceRange: "Rp150.000 - Rp500.000",
   areas: [

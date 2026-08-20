@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { FaWrench, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -14,13 +15,14 @@ export default function Footer() {
           
           {/* Column 1: Brand Info & NAP (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-500 flex items-center justify-center text-white shadow-md">
-                <FaWrench className="text-xl" />
-              </div>
-              <span className="font-extrabold text-xl text-white tracking-tight">
-                {siteConfig.name}
-              </span>
+            <Link href="/" className="inline-block bg-white px-3.5 py-2 rounded-xl shadow-md hover:scale-105 transition-transform">
+              <Image
+                src="/logo-transparent.png"
+                alt={`${siteConfig.name} - ${siteConfig.tagline}`}
+                width={200}
+                height={60}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed pr-4 font-medium">

@@ -7,7 +7,7 @@ import MapSection from "@/components/MapSection";
 export const metadata: Metadata = {
   title: "Kontak & Alamat Klinik Pipa Bandung",
   description:
-    "Hubungi Klinik Pipa Bandung 24 jam via Telepon 0851-2277-7253 atau WhatsApp. Solusi pipa bocor, pipa kotor (detox pipa) dan pipa mampet.",
+    `Hubungi Klinik Pipa Bandung 24 jam via Telepon ${siteConfig.phone} atau WhatsApp. Solusi pipa bocor, pipa kotor (detox pipa) dan pipa mampet.`,
   alternates: {
     canonical: `${siteConfig.domain}/kontak`,
   },

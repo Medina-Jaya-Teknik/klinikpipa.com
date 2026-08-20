@@ -8,8 +8,8 @@ export function generateLocalBusinessSchema() {
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.domain,
-    logo: `${siteConfig.domain}/logo.png`,
-    image: `${siteConfig.domain}/hero.png`,
+    logo: `${siteConfig.domain}/logo%20landscape.png`,
+    image: `${siteConfig.domain}/logo%20dan%20nama.png`,
     telephone: siteConfig.phone,
     priceRange: siteConfig.priceRange,
     description: siteConfig.description,
@@ -142,7 +142,7 @@ export function generateArticleSchema(article: {
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.domain}/logo.png`,
+        url: `${siteConfig.domain}/logo%20landscape.png`,
       },
     },
   };

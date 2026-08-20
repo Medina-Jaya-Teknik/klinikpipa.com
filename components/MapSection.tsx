@@ -24,7 +24,7 @@ export default function MapSection() {
             </h2>
 
             <p className="text-slate-600 text-sm leading-relaxed">
-              Workshop kami berpusat di Cicendo, Bandung. Armada teknisi kami disebar di berbagai titik pos siaga agar dapat menjangkau seluruh kecamatan di Bandung dengan cepat.
+              Workshop kami berpusat di Sukajadi, Bandung. Armada teknisi kami disebar di berbagai titik pos siaga agar dapat menjangkau seluruh kecamatan di Bandung dengan cepat.
             </p>
 
             <div className="space-y-4 pt-2">
