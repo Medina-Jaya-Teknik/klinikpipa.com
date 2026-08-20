@@ -100,6 +100,10 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${plusJakartaSans.variable} scroll-smooth`}>
       <head>
+        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+        <link rel="icon" href="/favicon-32x32.png?v=2" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png?v=2" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
         {/* Injected Global LocalBusiness JSON-LD Schema */}
         <script
           type="application/ld+json"
