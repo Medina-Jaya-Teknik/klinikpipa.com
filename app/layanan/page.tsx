@@ -20,6 +20,13 @@ export default function LayananPage() {
     { name: "Layanan", url: "/layanan" },
   ]);
 
+  const serviceImageMap: Record<string, string> = {
+    "deteksi-pipa-bocor": "/images/layanan-deteksi-bocor.webp",
+    "detox-pipa-kotor": "/images/layanan-detox-pipa.webp",
+    "inspeksi-kamera-pipa": "/images/layanan-inspeksi-kamera.webp",
+    "pelancaran-saluran-mampet": "/images/layanan-saluran-mampet.webp",
+  };
+
   return (
     <>
       <script
@@ -48,6 +55,7 @@ export default function LayananPage() {
           {siteConfig.services.map((service, index) => {
             const isEven = index % 2 === 0;
             const waUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=Halo%20Klinik%20Pipa,%20saya%20butuh%20jasa%20${encodeURIComponent(service.name)}.`;
+            const imageSrc = serviceImageMap[service.id];
 
             return (
               <div
@@ -105,19 +113,44 @@ export default function LayananPage() {
                   </div>
                 </div>
 
-                {/* Decorative Box */}
-                <div className="w-full lg:w-96 h-64 rounded-2xl bg-gradient-to-tr from-sky-600 via-sky-500 to-emerald-500 text-white p-8 flex flex-col justify-between relative overflow-hidden shadow-lg">
-                  <div className="w-12 h-12 rounded-xl bg-white/20 text-white flex items-center justify-center backdrop-blur-md">
-                    <FaTools className="text-2xl" />
-                  </div>
+                {/* Service Feature Image Card */}
+                <div className="w-full lg:w-[440px] h-72 sm:h-80 rounded-3xl overflow-hidden border border-slate-200 shadow-xl relative group bg-slate-100 flex-shrink-0">
+                  {imageSrc ? (
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={imageSrc}
+                        alt={`${service.name} Bandung Spesialis Klinik Pipa`}
+                        title={`${service.name} 24 Jam Bandung Tanpa Bobok`}
+                        loading="lazy"
+                        decoding="async"
+                        width={800}
+                        height={450}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span className="text-[11px] text-emerald-400 font-extrabold tracking-wider uppercase mb-1">
+                          Teknologi Presisi Tanpa Bongkar
+                        </span>
+                        <h3 className="text-lg font-bold text-white leading-snug">{service.name}</h3>
+                        <p className="text-xs text-slate-200 mt-1 line-clamp-2 font-medium">{service.shortDesc}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-tr from-sky-600 via-sky-500 to-emerald-500 text-white p-8 flex flex-col justify-between">
+                      <div className="w-12 h-12 rounded-xl bg-white/20 text-white flex items-center justify-center backdrop-blur-md">
+                        <FaTools className="text-2xl" />
+                      </div>
 
-                  <div>
-                    <span className="text-xs text-emerald-100 font-extrabold tracking-wider uppercase block mb-1">
-                      Teknologi Presisi
-                    </span>
-                    <h3 className="text-2xl font-black text-white">Tanpa Bobok Sembarangan</h3>
-                    <p className="text-xs text-sky-100 mt-1 font-medium">Akurat 99% melacak titik kerusakan tanpa merusak lantai/ruangan.</p>
-                  </div>
+                      <div>
+                        <span className="text-xs text-emerald-100 font-extrabold tracking-wider uppercase block mb-1">
+                          Teknologi Presisi
+                        </span>
+                        <h3 className="text-2xl font-black text-white">Tanpa Bobok Sembarangan</h3>
+                        <p className="text-xs text-sky-100 mt-1 font-medium">Akurat 99% melacak titik kerusakan tanpa merusak lantai/ruangan.</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             );

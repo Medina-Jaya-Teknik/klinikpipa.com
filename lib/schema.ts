@@ -121,12 +121,18 @@ export function generateArticleSchema(article: {
   datePublished: string;
   slug: string;
   author?: string;
+  image?: string;
 }) {
+  const imageUrl = article.image
+    ? (article.image.startsWith("http") ? article.image : `${siteConfig.domain}${article.image}`)
+    : `${siteConfig.domain}/logo%20landscape.png`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
     description: article.description,
+    image: imageUrl,
     datePublished: article.datePublished,
     dateModified: article.datePublished,
     mainEntityOfPage: {

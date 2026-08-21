@@ -1,3 +1,5 @@
+"use client";
+
 import { siteConfig } from "@/config/site";
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaShieldAlt, FaStar, FaBolt, FaSearchLocation, FaBroom, FaVideo } from "react-icons/fa";
 import Link from "next/link";
@@ -168,6 +170,25 @@ export default function Hero() {
           </div>
 
         </div>
+
+        {/* Dedicated Full-Width Hero Banner Showcase Strip */}
+        <div className="mt-14 relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-sky-400/30 via-emerald-400/30 to-cyan-400/30 rounded-[2.5rem] blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <div className="relative overflow-hidden rounded-[2rem] border-2 border-white/80 shadow-2xl bg-slate-900">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero-banner.webp"
+              alt="Jasa Deteksi Pipa Bocor, Detox Pipa & Pelancar Saluran Mampet Bandung - Klinik Pipa 24 Jam"
+              title="Klinik Pipa Bandung - Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet Tanpa Bongkar 24 Jam"
+              loading="eager"
+              fetchPriority="high"
+              width={1200}
+              height={514}
+              className="w-full aspect-[21/9] sm:aspect-[24/9] object-cover group-hover:scale-[1.02] transition-transform duration-700"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );

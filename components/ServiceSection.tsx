@@ -1,3 +1,5 @@
+"use client";
+
 import { siteConfig } from "@/config/site";
 import { FaSearchLocation, FaBroom, FaEye, FaTools, FaCheckCircle, FaWhatsapp, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
@@ -17,10 +19,17 @@ export default function ServiceSection() {
     FaTools: "bg-amber-100 border-amber-200",
   };
 
+  const serviceImageMap: Record<string, string> = {
+    "deteksi-pipa-bocor": "/images/layanan-deteksi-bocor.webp",
+    "detox-pipa-kotor": "/images/layanan-detox-pipa.webp",
+    "inspeksi-kamera-pipa": "/images/layanan-inspeksi-kamera.webp",
+    "pelancaran-saluran-mampet": "/images/layanan-saluran-mampet.webp",
+  };
+
   return (
     <section id="layanan" className="py-16 md:py-24 bg-slate-50 text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-900 text-xs font-bold uppercase tracking-wider">
@@ -38,13 +47,32 @@ export default function ServiceSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {siteConfig.services.map((service) => {
             const bookingWaUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=Halo%20Klinik%20Pipa,%20saya%20ingin%20pesan%20jasa%20${encodeURIComponent(service.name)}.`;
-            
+
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-3xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-3xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group overflow-hidden"
               >
                 <div>
+                  {serviceImageMap[service.id] && (
+                    <div className="mb-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-100 -mx-1 -mt-1">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={serviceImageMap[service.id]}
+                        alt={`${service.name} Bandung - Klinik Pipa`}
+                        title={`${service.name} 24 Jam Bandung - Tanpa Bongkar`}
+                        loading="lazy"
+                        decoding="async"
+                        width={600}
+                        height={337}
+                        className="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  )}
+
                   {/* Icon & Price Tag */}
                   <div className="flex items-center justify-between mb-6">
                     <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center group-hover:scale-110 transition-transform ${bgIconMap[service.iconName] || "bg-sky-100 border-sky-200"}`}>

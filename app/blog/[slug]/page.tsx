@@ -30,6 +30,10 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
     };
   }
 
+  const imageUrl = post.image
+    ? (post.image.startsWith("http") ? post.image : `${siteConfig.domain}${post.image}`)
+    : `${siteConfig.domain}/logo%20landscape.png`;
+
   return {
     title: `${post.title} - Blog Klinik Pipa`,
     description: post.excerpt,
@@ -45,7 +49,7 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
       publishedTime: post.date,
       images: [
         {
-          url: `${siteConfig.domain}/logo%20landscape.png`,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -56,7 +60,7 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [`${siteConfig.domain}/logo%20landscape.png`],
+      images: [imageUrl],
     },
   };
 }
@@ -75,6 +79,7 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     datePublished: post.date,
     slug: post.slug,
     author: post.author,
+    image: post.image,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -137,6 +142,17 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
       {/* Content */}
       <section className="py-16 bg-white text-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          
+          {post.image && (
+            <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-xl bg-slate-100 mb-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          )}
           
           <div className="prose max-w-none space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
             {post.content.map((paragraph, pIdx) => (

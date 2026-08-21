@@ -8,6 +8,7 @@ export interface BlogPost {
   readTime: string;
   tags: string[];
   content: string[];
+  image?: string;
   faqs?: { question: string; answer: string }[];
 }
 
@@ -22,6 +23,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "4 menit baca",
     tags: ["Pipa Bocor", "Deteksi Akustik", "Tips Bandung", "Kebocoran Tembok"],
+    image: "/images/blog/tanda-pipa-air-bocor-tersembunyi-dinding.webp",
     content: [
       "Kebocoran pipa air tersembunyi di balik dinding beton atau bawah lantai keramik adalah salah satu masalah paling merugikan bagi pemilik rumah di Bandung.",
       "Selain menyebabkan pemborosan air dan pembengkakan tagihan bulanan, air yang terus menetes di dalam struktur bangunan dapat merusak dinding, melapukkan cat, hingga memicu pertumbuhan jamur berbahaya.",
@@ -55,6 +57,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "5 menit baca",
     tags: ["Detox Pipa", "Cuci Pipa Bandung", "Air Keran Jernih", "Pipa Kotor"],
+    image: "/images/blog/apa-itu-detox-pipa-air-bersih-bandung.webp",
     content: [
       "Banyak penghuni rumah di Bandung mengeluhkan air keran yang berwarna kekuningan, berbau besi, keruh, atau bahkan keluar cacing kecil padahal toren air sudah dibersihkan secara rutin.",
       "Tahukah Anda bahwa penyebab utamanya berada di sepanjang dinding dalam instalasi pipa PVC/besi rumah Anda? Pipa air bersih yang sudah berumur bertahun-tahun mengendapkan kerak lumut, logam karat, lumpur tebal, dan bio-film bakteri.",
@@ -84,6 +87,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "3 menit baca",
     tags: ["Kamera Pipa", "Mesin Spiral", "Deteksi Mampet", "Tukang Pipa Bandung"],
+    image: "/images/blog/keunggulan-mesin-spiral-rigid-pelancarkan-saluran.webp",
     content: [
       "Memperbaiki masalah pipa saluran tanpa mengetahui kondisi riil di dalam saluran adalah tindakan berisiko yang bisa menyebabkan kerusakan permanen pada struktur pipa.",
       "Klinik Pipa mengintegrasikan teknologi Kamera Endoskop Waterproof HD dengan Mesin Kabel Spiral Rigid Fleksibel.",
@@ -101,6 +105,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "5 menit baca",
     tags: ["Jasa Saluran Mampet", "Tukang Pipa Bandung", "Pelancar WC Mampet", "Tanpa Bongkar", "Bandung 24 Jam"],
+    image: "/images/blog/jasa-saluran-mampet-bandung.webp",
     content: [
       "Saluran air mampet atau tersumbat adalah salah satu masalah rumah tangga dan komersial yang paling sering memicu kepanikan di wilayah Bandung dan sekitarnya.",
       "Mulai dari air wastafel cuci piring yang menggenang akibat lemak membeku, WC atau toilet meluap saat disiram, hingga floor drain kamar mandi yang tergenang air kotor berbau tak sedap. Jika tidak segera ditangani, sumbatan pipa dapat merusak kenyamanan tempat tinggal serta mengganggu operasional usaha seperti restoran dan hotel.",
@@ -136,6 +141,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "5 menit baca",
     tags: ["Jasa Detox Pipa", "Cuci Pipa Air Bersih", "Pipa Berbau Bandung", "Air Keran Kuning", "Hydro Flushing"],
+    image: "/images/blog/jasa-detox-pipa-kotor-bandung.webp",
     content: [
       "Apakah air keran di rumah Anda di Bandung berwarna kekuningan, berbau kotor/besi, keruh, atau bahkan mengeluarkan serpihan kerak kotoran hitam? Masalah ini bukan selalu disebabkan oleh toren/penampung air yang kotor, melainkan oleh endapan kerak tebal di dalam dinding instalasi pipa air bersih.",
       "Mengapa Pipa Air Bersih Perlu Di-detox (Dicuci Berkala)?\nInstalasi pipa air PVC maupun besi yang terpasang di bawah tanah atau dalam tembok rumah selama bertahun-tahun akan menumpuk bio-film (lapisan lendir bakteri), karat logam, lumut, dan lumpur halus. Menguras toren saja hanya membersihkan penampung, tetapi tidak dapat menjangkau puluhan meter saluran pipa yang mengalirkan air ke keran mandi, wastafel, dan dapur Anda.",
@@ -170,6 +176,7 @@ export const blogPosts: BlogPost[] = [
     author: "Tim Teknisi Klinik Pipa",
     readTime: "5 menit baca",
     tags: ["Jasa Deteksi Pipa Bocor", "Tukang Pipa Bocor Bandung", "Pipa Bocor Tersembunyi", "Deteksi Akustik", "Kamera Thermal"],
+    image: "/images/blog/jasa-deteksi-pipa-bocor-bandung.webp",
     content: [
       "Kebocoran pipa air bersih (PDAM atau pendorong jet pump) yang tersembunyi di balik dinding beton atau di bawah lantai keramik adalah salah satu masalah paling merugikan bagi pemilik rumah, pengelola gedung, dan bisnis di Bandung.",
       "Kebocoran halus yang tidak terlihat dapat memicu masalah serius seperti tagihan air PDAM melonjak tajam secara tidak wajar, pompa air otomatis menyala mati sendiri tanpa ada keran yang dibuka, hingga struktur dinding menjadi basah, berkelupas, dan berjamur.",

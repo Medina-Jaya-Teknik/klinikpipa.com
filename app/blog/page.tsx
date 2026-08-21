@@ -50,9 +50,19 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-sky-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-sky-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
               >
                 <div>
+                  {post.image && (
+                    <div className="mb-5 overflow-hidden rounded-2xl border border-slate-200/80 -mx-1 -mt-1">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center justify-between text-[11px] text-slate-500 mb-4 font-medium">
                     <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-200 font-bold">
                       {post.category}
