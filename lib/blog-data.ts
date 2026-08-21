@@ -91,4 +91,107 @@ export const blogPosts: BlogPost[] = [
       "Layanan ini tersedia untuk perumahan, restoran, gedung perkantoran, dan pabrik di seluruh wilayah Bandung.",
     ],
   },
+  {
+    slug: "jasa-saluran-mampet-bandung",
+    title: "Jasa Saluran Mampet Bandung 24 Jam - Pelancar Pipa & WC Mampet Tanpa Bongkar",
+    excerpt:
+      "Layanan profesional jasa pelancaran saluran mampet di Bandung untuk WC, wastafel, sink dapur, kamar mandi, dan got. Bebas bongkar keramik, garansi lancar 100%.",
+    category: "Saluran Mampet",
+    date: "2026-08-21",
+    author: "Tim Teknisi Klinik Pipa",
+    readTime: "5 menit baca",
+    tags: ["Jasa Saluran Mampet", "Tukang Pipa Bandung", "Pelancar WC Mampet", "Tanpa Bongkar", "Bandung 24 Jam"],
+    content: [
+      "Saluran air mampet atau tersumbat adalah salah satu masalah rumah tangga dan komersial yang paling sering memicu kepanikan di wilayah Bandung dan sekitarnya.",
+      "Mulai dari air wastafel cuci piring yang menggenang akibat lemak membeku, WC atau toilet meluap saat disiram, hingga floor drain kamar mandi yang tergenang air kotor berbau tak sedap. Jika tidak segera ditangani, sumbatan pipa dapat merusak kenyamanan tempat tinggal serta mengganggu operasional usaha seperti restoran dan hotel.",
+      "Mengapa Saluran Air di Rumah Sering Mampet?\n1. Penumpukan Lemak & Sisa Makanan: Di area dapur, minyak goreng dan sisa makanan yang masuk ke sink lambat laun akan membeku dan mengeras di dinding dalam pipa PVC.\n2. Rontokan Rambut & Sampah Kecil: Di kamar mandi, helai rambut yang tersangkut bersama sisa sabun akan membentuk gumpalan serat tebal yang menyumbat aliran air.\n3. Endapan Semen & Sisa Bangunan: Pasca renovasi rumah, sering kali sisa semen atau pasir masuk ke dalam pipa got buangan dan mengendap menjadi batu keras.\n4. Masuknya Benda Asing ke WC: Pembalut, tisu basah, mainan anak, atau kantong plastik yang tak sengaja terbuang ke dalam kloset.",
+      "Bahaya Menggunakan Cairan Kimia Pembersih Kimia Keras\nBanyak pemilik rumah mencoba mengatasi mampet sendiri menggunakan soda api atau cairan kimia anti-mampet konsentrasi tinggi. Sayangnya, reaksi panas ekstrem dari soda api justru dapat melelehkan sambungan pipa PVC, membuat pipa melengkung, atau bahkan memperparah sumbatan karena kotoran mengeras kembali.",
+      "Solusi Modern Klinik Pipa: Pelancaran Saluran Mampet Tanpa Bongkar\nSebagai spesialis perbaikan instalasi pipa air di Bandung, Klinik Pipa menghadirkan teknologi mesin pelancar pipa modern tanpa perlu membongkar lantai keramik atau merusak tembok bangunan Anda:\n- Mesin Spiral Rigid Fleksibel: Menggunakan kabel baja lentur berputar tinggi yang mampu menembus lekukan pipa (elbow) dan menghancurkan gumpalan lemak, rambut, serta kerak kotoran.\n- Water Jetting Bertekanan Tinggi: Untuk kasus pipa komersial atau saluran got utama, kami menyemprotkan dorongan air bertekanan ribuan PSI untuk membilas bersih seluruh endapan kotoran keluar.\n- Pengerjaan Cepat & Bergaransi: Tim teknisi berpengalaman Klinik Pipa siap datang ke lokasi Anda di Bandung Kota, Kabupaten Bandung, Cimahi, dan sekitarnya dengan garansi pengerjaan tuntas 100%.",
+    ],
+    faqs: [
+      {
+        question: "Berapa lama waktu pengerjaan pelancaran saluran mampet di lokasi?",
+        answer:
+          "Rata-rata pengerjaan membutuhkan waktu 30 menit hingga 1,5 jam tergantung pada tingkat keparahan sumbatan dan panjang jalur pipa rumah Anda.",
+      },
+      {
+        question: "Apakah pengerjaan saluran mampet perlu merusak atau membongkar lantai keramik?",
+        answer:
+          "Tidak. Klinik Pipa menerapkan metode 100% Tanpa Bongkar menggunakan kawat spiral rigid fleksibel dan kamera endoskop sehingga keramik dan tembok Anda tetap utuh.",
+      },
+      {
+        question: "Wilayah mana saja di Bandung yang dilayani Klinik Pipa?",
+        answer:
+          "Kami melayani seluruh area Bandung Kota (Coblong, Dago, Buahbatu, Antapani, Pasteur, dll), Kabupaten Bandung, Bandung Barat, hingga Kota Cimahi 24 Jam Nonstop.",
+      },
+    ],
+  },
+  {
+    slug: "jasa-detox-pipa-kotor-bandung",
+    title: "Jasa Detox Pipa Kotor Bandung - Solusi Cuci Pipa Air Bersih Berbau & Kuning",
+    excerpt:
+      "Layanan jasa cuci & detox pipa air bersih kotor di Bandung menggunakan teknologi Hydro Pressure Flushing tanpa bahan kimia. Menghilangkan kerak hitam, lumpur, dan bau.",
+    category: "Detox Pipa Kotor",
+    date: "2026-08-21",
+    author: "Tim Teknisi Klinik Pipa",
+    readTime: "5 menit baca",
+    tags: ["Jasa Detox Pipa", "Cuci Pipa Air Bersih", "Pipa Berbau Bandung", "Air Keran Kuning", "Hydro Flushing"],
+    content: [
+      "Apakah air keran di rumah Anda di Bandung berwarna kekuningan, berbau kotor/besi, keruh, atau bahkan mengeluarkan serpihan kerak kotoran hitam? Masalah ini bukan selalu disebabkan oleh toren/penampung air yang kotor, melainkan oleh endapan kerak tebal di dalam dinding instalasi pipa air bersih.",
+      "Mengapa Pipa Air Bersih Perlu Di-detox (Dicuci Berkala)?\nInstalasi pipa air PVC maupun besi yang terpasang di bawah tanah atau dalam tembok rumah selama bertahun-tahun akan menumpuk bio-film (lapisan lendir bakteri), karat logam, lumut, dan lumpur halus. Menguras toren saja hanya membersihkan penampung, tetapi tidak dapat menjangkau puluhan meter saluran pipa yang mengalirkan air ke keran mandi, wastafel, dan dapur Anda.",
+      "Dampak Buruk Pipa Air Kotor yang Dibiarkan:\n1. Risiko Kesehatan Kulit & Pencernaan: Air yang tercemar bio-film bakteri dan cacing kecil dapat memicu gatal-gatal pada kulit sensitif serta gangguan kesehatan keluarga.\n2. Debit Air Keran Menjadi Kecil: Penyumbatan kerak endapan membuat tekanan air berkurang drastis sehingga kucuran keran menjadi pelan.\n3. Kerusakan Peralatan Rumah Tangga: Kerak besi dan lumpur merusak komponen mesin cuci, pemanas air (water heater), dan filter air keran.",
+      "Teknologi Cuci Pipa Hydro Pressure Flushing (Tanpa Bahan Kimia)\nKlinik Pipa hadir dengan solusi profesional Jasa Detox Pipa Kotor di Bandung menggunakan metode pendorong Hydro Pressure Flushing modern:\n- 100% Tanpa Bahan Kimia Berbahaya: Kami hanya menggunakan dorongan gelombang tekanan air steril dan udara bertekanan terkontrol (push-pull wave) yang aman untuk pipa air minum.\n- Merontokkan Kerak Hitam & Lumpur: Gelombang udara bertekanan merontokkan kerak biofilm yang menempel di dinding pipa hingga bersih total.\n- Hasil Langsung Terlihat: Kotoran dan lumpur pekat dibuang melalui keran buangan hingga air mengalir 100% jernih dan bebas bau.\n- Garansi & Teknisi Ahli: Pengerjaan dilakukan oleh teknisi berpengalaman tanpa merusak konstruksi bangunan.",
+    ],
+    faqs: [
+      {
+        question: "Apakah proses detox pipa aman untuk pipa PVC rumah yang sudah tua?",
+        answer:
+          "Sangat aman. Tekanan udara dan air dari mesin Hydro Flushing disesuaikan secara presisi dengan spesifikasi pipa PVC rumah sehingga tidak menimbulkan kebocoran atau kerusakan pada sambungan pipa.",
+      },
+      {
+        question: "Berapa lama waktu yang dibutuhkan untuk proses cuci detox pipa rumah?",
+        answer:
+          "Proses detox pipa untuk rumah tinggal 1 sampai 2 lantai biasanya berlangsung antara 2 hingga 3 jam saja.",
+      },
+      {
+        question: "Apakah air langsung bisa digunakan setelah detox selesai?",
+        answer:
+          "Ya! Karena kami tidak menggunakan bahan kimia beracun sama sekali, air keran di rumah Anda langsung aman digunakan untuk mandi, mencuci pakaian, dan kebutuhan harian keluarga.",
+      },
+    ],
+  },
+  {
+    slug: "jasa-deteksi-pipa-bocor-bandung",
+    title: "Jasa Deteksi Pipa Bocor Bandung - Pelacakan Akustik & Thermal Tanpa Bobok",
+    excerpt:
+      "Layanan jasa deteksi lokasi pipa air bocor tersembunyi di dalam tembok atau bawah lantai di Bandung menggunakan teknologi sensor akustik & thermal camera presisi tinggi.",
+    category: "Deteksi Pipa Bocor",
+    date: "2026-08-21",
+    author: "Tim Teknisi Klinik Pipa",
+    readTime: "5 menit baca",
+    tags: ["Jasa Deteksi Pipa Bocor", "Tukang Pipa Bocor Bandung", "Pipa Bocor Tersembunyi", "Deteksi Akustik", "Kamera Thermal"],
+    content: [
+      "Kebocoran pipa air bersih (PDAM atau pendorong jet pump) yang tersembunyi di balik dinding beton atau di bawah lantai keramik adalah salah satu masalah paling merugikan bagi pemilik rumah, pengelola gedung, dan bisnis di Bandung.",
+      "Kebocoran halus yang tidak terlihat dapat memicu masalah serius seperti tagihan air PDAM melonjak tajam secara tidak wajar, pompa air otomatis menyala mati sendiri tanpa ada keran yang dibuka, hingga struktur dinding menjadi basah, berkelupas, dan berjamur.",
+      "Kerugian Jika Pembongkaran Dilakukan Secara Asal-asalan:\nTanpa peralatan pelacak khusus, pembongkaran tembok atau keramik secara acak hanya akan merusak keindahan rumah, membuang biaya renovasi mahal, dan belum tentu menemukan titik bocor yang sebenarnya karena air bisa merembes jauh dari sumber bocor asli.",
+      "Teknologi Deteksi Presisi Klinik Pipa (Tanpa Merusak):\nKlinik Pipa mengintegrasikan alat pelacak modern terbaik untuk menemukan titik kebocoran pipa hingga skala sentimeter:\n- Acoustic Leak Detector: Sensor frekuensi tinggi yang menangkap gelombang suara desis air bocor di bawah tanah atau balik dinding beton tebal.\n- Thermal Imaging Camera: Mengidentifikasi perbedaan suhu dan pola rembesan air tersembunyi di balik permukaan tembok dan lantai.\n- Pressure Test & Gas Tracer: Pengujian tekanan pipa sistematis untuk memvalidasi tingkat kebocoran sebelum pembobokan kecil tepat di titik lokasi bocor.\n- Bergaransi & Hemat Biaya: Menghindari pembongkaran luas yang tidak perlu, menghemat waktu dan biaya perbaikan Anda.",
+    ],
+    faqs: [
+      {
+        question: "Bagaimana cara teknisi mengetahui ada kebocoran pipa tersembunyi tanpa membongkar lantai?",
+        answer:
+          "Teknisi menggunakan Acoustic Leak Detector yang dapat mendengarkan desis arus air keluar dari pipa bocor serta Kamera Thermal untuk melihat rembesan air di balik keramik secara non-invasif.",
+      },
+      {
+        question: "Berapa lama proses pendeteksian titik pipa bocor dilakukan?",
+        answer:
+          "Pendeteksian lokasi bocor rata-rata membutuhkan waktu 1 hingga 2 jam tergantung luas bangunan dan kompleksitas jalur instalasi pipa.",
+      },
+      {
+        question: "Apakah Klinik Pipa juga memberikan layanan perbaikan langsung setelah titik bocor ditemukan?",
+        answer:
+          "Ya, setelah titik bocor terdeteksi akurat, teknisi kami siap melakukan pembobokan minimalis dan penggantian/penambalan pipa yang bocor hingga selesai bergaransi.",
+      },
+    ],
+  },
 ];

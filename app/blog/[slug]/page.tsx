@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog-data";
 import { siteConfig } from "@/config/site";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 import { FaClock, FaUser, FaTag, FaArrowLeft, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
@@ -43,6 +43,20 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
       url: `${siteConfig.domain}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      images: [
+        {
+          url: `${siteConfig.domain}/logo%20landscape.png`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`${siteConfig.domain}/logo%20landscape.png`],
     },
   };
 }
@@ -69,11 +83,17 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     { name: post.title, url: `/blog/${post.slug}` },
   ]);
 
+  const jsonLdSchemas: object[] = [articleSchema, breadcrumbSchema];
+
+  if (post.faqs && post.faqs.length > 0) {
+    jsonLdSchemas.push(generateFAQSchema(post.faqs));
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchemas) }}
       />
 
       {/* Header */}
