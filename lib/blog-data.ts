@@ -4,6 +4,7 @@ export interface BlogPost {
   excerpt: string;
   category: string;
   date: string;
+  updatedDate?: string;
   author: string;
   readTime: string;
   tags: string[];
@@ -15,7 +16,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "tanda-pipa-air-bocor-tersembunyi-dinding",
-    title: "5 Tanda Pipa Air Bocor Tersembunyi di Dalam Dinding & Cara Mendeteksinya",
+    title: "5 Tanda Pipa Air Bocor Tersembunyi di Dalam Dinding",
     excerpt:
       "Kenali gejala kebocoran pipa air PDAM atau pompa tersembunyi seperti tagihan air membengkak dan tembok lembab, serta teknologi deteksi akustik tanpa bobok.",
     category: "Deteksi Pipa Bocor",
@@ -49,7 +50,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "apa-itu-detox-pipa-air-bersih-bandung",
-    title: "Apa Itu Detox Pipa Air Bersih? Solusi Air Keran Kuning & Berbau di Bandung",
+    title: "Apa Itu Detox Pipa Air Bersih? Solusi Air Keran Kuning",
     excerpt:
       "Pelajari metode pencucian pipa air minum & keran rumah menggunakan teknologi Hydro Pressure Flushing untuk menguras kerak hitam, lumpur, dan cacing.",
     category: "Detox Pipa Kotor",
@@ -79,7 +80,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "keunggulan-mesin-spiral-rigid-pelancarkan-saluran",
-    title: "Mengenal Teknologi Kamera Endoskop Pipa & Mesin Spiral Modern",
+    title: "Teknologi Kamera Endoskop & Mesin Spiral Pipa Mampet",
     excerpt:
       "Kombinasi teknologi inspeksi kamera CCTV pipa HD dan kawat fleksibel spiral untuk mendiagnosis serta melancarkan saluran mampet tanpa bobok.",
     category: "Teknologi Peralatan",
@@ -97,43 +98,63 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "jasa-saluran-mampet-bandung",
-    title: "Jasa Saluran Mampet Bandung 24 Jam - Pelancar Pipa & WC Mampet Tanpa Bongkar",
+    title: "Jasa Saluran Mampet Bandung 24 Jam - Pelancar Pipa & WC",
     excerpt:
-      "Layanan profesional jasa pelancaran saluran mampet di Bandung untuk WC, wastafel, sink dapur, kamar mandi, dan got. Bebas bongkar keramik, garansi lancar 100%.",
+      "Layanan profesional pelancaran saluran mampet 24 jam di Bandung untuk WC, wastafel, kitchen sink, floor drain, dan got. Menggunakan mesin spiral rigid & water jetting tanpa bongkar keramik, garansi 100% lancar.",
     category: "Saluran Mampet",
     date: "2026-08-21",
+    updatedDate: "2026-09-07",
     author: "Tim Teknisi Klinik Pipa",
-    readTime: "5 menit baca",
-    tags: ["Jasa Saluran Mampet", "Tukang Pipa Bandung", "Pelancar WC Mampet", "Tanpa Bongkar", "Bandung 24 Jam"],
+    readTime: "6 menit baca",
+    tags: [
+      "Jasa Saluran Mampet Bandung",
+      "Pelancar WC Mampet Bandung",
+      "Tukang Pipa Mampet Bandung 24 Jam",
+      "Saluran Wastafel Mampet",
+      "Pelancar Pipa Tanpa Bongkar",
+      "Water Jetting Bandung",
+    ],
     image: "/images/blog/jasa-saluran-mampet-bandung.webp",
     content: [
-      "Saluran air mampet atau tersumbat adalah salah satu masalah rumah tangga dan komersial yang paling sering memicu kepanikan di wilayah Bandung dan sekitarnya.",
-      "Mulai dari air wastafel cuci piring yang menggenang akibat lemak membeku, WC atau toilet meluap saat disiram, hingga floor drain kamar mandi yang tergenang air kotor berbau tak sedap. Jika tidak segera ditangani, sumbatan pipa dapat merusak kenyamanan tempat tinggal serta mengganggu operasional usaha seperti restoran dan hotel.",
-      "Mengapa Saluran Air di Rumah Sering Mampet?\n1. Penumpukan Lemak & Sisa Makanan: Di area dapur, minyak goreng dan sisa makanan yang masuk ke sink lambat laun akan membeku dan mengeras di dinding dalam pipa PVC.\n2. Rontokan Rambut & Sampah Kecil: Di kamar mandi, helai rambut yang tersangkut bersama sisa sabun akan membentuk gumpalan serat tebal yang menyumbat aliran air.\n3. Endapan Semen & Sisa Bangunan: Pasca renovasi rumah, sering kali sisa semen atau pasir masuk ke dalam pipa got buangan dan mengendap menjadi batu keras.\n4. Masuknya Benda Asing ke WC: Pembalut, tisu basah, mainan anak, atau kantong plastik yang tak sengaja terbuang ke dalam kloset.",
-      "Bahaya Menggunakan Cairan Kimia Pembersih Kimia Keras\nBanyak pemilik rumah mencoba mengatasi mampet sendiri menggunakan soda api atau cairan kimia anti-mampet konsentrasi tinggi. Sayangnya, reaksi panas ekstrem dari soda api justru dapat melelehkan sambungan pipa PVC, membuat pipa melengkung, atau bahkan memperparah sumbatan karena kotoran mengeras kembali.",
-      "Solusi Modern Klinik Pipa: Pelancaran Saluran Mampet Tanpa Bongkar\nSebagai spesialis perbaikan instalasi pipa air di Bandung, Klinik Pipa menghadirkan teknologi mesin pelancar pipa modern tanpa perlu membongkar lantai keramik atau merusak tembok bangunan Anda:\n- Mesin Spiral Rigid Fleksibel: Menggunakan kabel baja lentur berputar tinggi yang mampu menembus lekukan pipa (elbow) dan menghancurkan gumpalan lemak, rambut, serta kerak kotoran.\n- Water Jetting Bertekanan Tinggi: Untuk kasus pipa komersial atau saluran got utama, kami menyemprotkan dorongan air bertekanan ribuan PSI untuk membilas bersih seluruh endapan kotoran keluar.\n- Pengerjaan Cepat & Bergaransi: Tim teknisi berpengalaman Klinik Pipa siap datang ke lokasi Anda di Bandung Kota, Kabupaten Bandung, Cimahi, dan sekitarnya dengan garansi pengerjaan tuntas 100%.",
+      "Saluran air tersumbat atau mampet adalah salah satu kedaruratan rumah tangga dan komersial paling mengganggu di wilayah Bandung dan sekitarnya. Air keran dapur yang menggenang akibat lemak beku, toilet disiram meluap ke lantai, atau floor drain kamar mandi yang menimbulkan bau tak sedap dapat menghentikan aktivitas keluarga dan merusak reputasi bisnis tempat usaha Anda.",
+      "Ketika sumbatan terjadi di dalam jalur instalasi pipa PVC bawah lantai atau balik dinding beton, penanganan tradisional dengan menyiram air panas saja sering kali tidak memicu hasil permanen. Tim teknisi Klinik Pipa Bandung hadir dengan teknologi pelancaran modern bebas pembongkaran keramik yang siap dipanggil 24 jam nonstop ke seluruh lokasi Anda.",
+      "Penyebab Utama Saluran Mampet & Tersumbat di Rumah / Usaha Bandung:\n1. Tumpukan Lemak Dapur (Kitchen Sink): Sisa minyak goreng, kuah masakan, dan mentega yang tercuci di wastafel meluncur ke dalam pipa lalu mendingin, mengeras, dan membentuk kerak lilin padat seperti batu.\n2. Serabut Rambut & Bio-film Sabun (Kamar Mandi): Helai rambut gugur yang tersangkut di elbow pipa kamar mandi menangkap sisa sabun mandi dan sel kulit mati, membentuk sumbatan berserat yang semakin membesar.\n3. Benda Asing Mampet di Kloset WC: Tisu basah, pembalut wanita, pembersih telinga, atau mainan anak yang tak sengaja terbuang ke dalam saluran kloset.\n4. Endapan Semen & Pasir Sisa Proyek: Pasca renovasi rumah atau instalasi baru, sisa adukan semen cair meluncur masuk ke saluran buangan dan membeku keras di belokan pipa.",
+      "Peringatan: Bahaya Penggunaan Soda Api & Cairan Kimia Keras!\nBanyak pemilik rumah terkecoh dengan solusi instan menyiram soda api (sodium hidroksida) atau bahan kimia anti-mampet konsentrasi tinggi. Reaksi kimia soda api menghasilkan panas ekstrem di atas 100°C yang dapat melelehkan sambungan fitting PVC, melengkungkan pipa, dan menyebabkan kebocoran fatal di balik dinding. Selain itu, uap kimia soda api sangat beracun bagi pernapasan dan mata.",
+      "Solusi Modern Klinik Pipa Bandung: 100% Tanpa Bongkar & Bergaransi:\nKlinik Pipa mengandalkan kombinasi peralatan berstandar internasional untuk melancarkan pipa mampet dengan cepat dan aman:\n- Mesin Spiral Rigid Fleksibel (Rooter Machine): Kabel baja khusus berulir lentur diputar dengan kecepatan tinggi melintasi lekukan pipa (elbow) hingga 30+ meter. Spiral ini merontokkan kerak lemak, menghancurkan benda keras, dan menarik keluar gumpalan sampah tanpa merusak dinding dalam PVC.\n- High-Pressure Water Jetting (Hydro Jetting): Menyemprotkan dorongan air bertekanan ribuan PSI untuk membilas bersih sisa endapan lemak di pipa restoran, hotel, pabrik, dan jaringan saluran got utama.\n- Inspeksi Kamera Endoskop Pipa HD: Kamera waterproof berukuran mikro dimasukkan ke dalam jalur pipa untuk melihat titik lokasi sumbatan secara visual sebelum dan sesudah tindakan.",
+      "Cakupan Wilayah Layanan Pelancar Saluran Mampet Bandung 24 Jam:\nKlinik Pipa menyiagakan armada teknisi terdekat di seluruh penjuru Bandung:\n- Kota Bandung: Dago, Coblong, Pasteur, Sukajadi, Cidadap, Antapani, Buahbatu, Lengkong, Arcamanik, Cibiru, Kopo, Bojongloa, Batununggal, dan sekitarnya.\n- Kota Cimahi: Cimahi Utara, Cimahi Tengah, Cimahi Selatan.\n- Kabupaten Bandung & Bandung Barat: Lembang, Padalarang, Soreang, Dayeuhkolot, Bojongsoang, Rancaekek, Margahayu.",
+      "Mengapa Memilih Jasa Pelancar Saluran Mampet Klinik Pipa?\n1. Respon Cepat 24/7: Siap datang ke lokasi Anda kapan saja, baik pagi, malam, maupun hari libur nasional.\n2. Pengerjaan 100% Tanpa Bongkar: Bebas dari biaya renovasi mahal karena lantai keramik dan tembok rumah Anda tetap aman utuh.\n3. Garansi Tuntas 100%: Pembayaran dilakukan setelah pengerjaan selesai dan aliran pipa diuji coba mengalir lancar kembali.\n4. Biaya Transparan & Terjangkau: Estimasi harga disampaikan secara jelas di awal sebelum pengerjaan dimulai.",
     ],
     faqs: [
       {
         question: "Berapa lama waktu pengerjaan pelancaran saluran mampet di lokasi?",
         answer:
-          "Rata-rata pengerjaan membutuhkan waktu 30 menit hingga 1,5 jam tergantung pada tingkat keparahan sumbatan dan panjang jalur pipa rumah Anda.",
+          "Rata-rata pengerjaan membutuhkan waktu 30 hingga 60 menit saja tergantung pada panjang jalur pipa dan tingkat keparahan sumbatan.",
       },
       {
         question: "Apakah pengerjaan saluran mampet perlu merusak atau membongkar lantai keramik?",
         answer:
-          "Tidak. Klinik Pipa menerapkan metode 100% Tanpa Bongkar menggunakan kawat spiral rigid fleksibel dan kamera endoskop sehingga keramik dan tembok Anda tetap utuh.",
+          "Tidak sama sekali. Klinik Pipa menggunakan mesin kawat spiral rigid fleksibel dan water jetting yang masuk langsung melalui lubang afur atau kloset tanpa merusak keramik maupun dinding.",
       },
       {
-        question: "Wilayah mana saja di Bandung yang dilayani Klinik Pipa?",
+        question: "Apakah ada garansi setelah pengerjaan selesai dilakukan?",
         answer:
-          "Kami melayani seluruh area Bandung Kota (Coblong, Dago, Buahbatu, Antapani, Pasteur, dll), Kabupaten Bandung, Bandung Barat, hingga Kota Cimahi 24 Jam Nonstop.",
+          "Ya! Semua layanan pelancaran saluran mampet di Klinik Pipa dilengkapi dengan garansi pengerjaan untuk memastikan saluran Anda tetap lancar bebas mampet.",
+      },
+      {
+        question: "Berapa estimasi biaya jasa pelancar saluran mampet di Bandung?",
+        answer:
+          "Biaya disesuaikan dengan jenis saluran (wastafel, WC, kamar mandi, atau got) dan tingkat kesulitan. Teknisi kami akan memberikan rincian harga transparan sebelum tindakan dilakukan.",
+      },
+      {
+        question: "Bagaimana cara memanggil teknisi pelancar saluran mampet 24 jam?",
+        answer:
+          "Anda cukup menghubungi Call Center / WhatsApp Klinik Pipa. Tim teknisi terdekat akan langsung diberangkatkan ke alamat Anda di area Bandung dan sekitarnya.",
       },
     ],
   },
   {
     slug: "jasa-detox-pipa-kotor-bandung",
-    title: "Jasa Detox Pipa Kotor Bandung - Solusi Cuci Pipa Air Bersih Berbau & Kuning",
+    title: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih",
     excerpt:
       "Layanan jasa cuci & detox pipa air bersih kotor di Bandung menggunakan teknologi Hydro Pressure Flushing tanpa bahan kimia. Menghilangkan kerak hitam, lumpur, dan bau.",
     category: "Detox Pipa Kotor",
@@ -168,7 +189,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "jasa-deteksi-pipa-bocor-bandung",
-    title: "Jasa Deteksi Pipa Bocor Bandung - Pelacakan Akustik & Thermal Tanpa Bobok",
+    title: "Jasa Deteksi Pipa Bocor Bandung - Pelacakan Akustik",
     excerpt:
       "Layanan jasa deteksi lokasi pipa air bocor tersembunyi di dalam tembok atau bawah lantai di Bandung menggunakan teknologi sensor akustik & thermal camera presisi tinggi.",
     category: "Deteksi Pipa Bocor",

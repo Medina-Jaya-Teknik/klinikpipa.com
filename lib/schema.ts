@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "PlumbingService"],
+    "@type": ["LocalBusiness", "Plumber"],
     "@id": `${siteConfig.domain}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
@@ -119,6 +119,7 @@ export function generateArticleSchema(article: {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   slug: string;
   author?: string;
   image?: string;
@@ -134,7 +135,7 @@ export function generateArticleSchema(article: {
     description: article.description,
     image: imageUrl,
     datePublished: article.datePublished,
-    dateModified: article.datePublished,
+    dateModified: article.dateModified || article.datePublished,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteConfig.domain}/blog/${article.slug}`,
@@ -164,7 +165,7 @@ export function generateAreaPageGraphSchema(
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "PlumbingService",
+        "@type": "Plumber",
         "@id": `${pageUrl}/#service`,
         name: `Jasa Deteksi Pipa Bocor & Detox Pipa di ${areaName} - ${siteConfig.name}`,
         url: pageUrl,

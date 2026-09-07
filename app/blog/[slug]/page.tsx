@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog-data";
 import { siteConfig } from "@/config/site";
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
-import { FaClock, FaUser, FaTag, FaArrowLeft, FaWhatsapp } from "react-icons/fa";
+import { FaClock, FaUser, FaArrowLeft, FaWhatsapp, FaSyncAlt, FaShieldAlt, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
       url: `${siteConfig.domain}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.updatedDate || post.date,
       images: [
         {
           url: imageUrl,
@@ -65,6 +66,19 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
   };
 }
 
+function formatDate(dateStr: string) {
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString("id-ID", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
 export default async function BlogSlugPage({ params }: BlogSlugProps) {
   const resolvedParams = await params;
   const post = blogPosts.find((p) => p.slug === resolvedParams.slug);
@@ -77,6 +91,7 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     title: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    dateModified: post.updatedDate || post.date,
     slug: post.slug,
     author: post.author,
     image: post.image,
@@ -117,6 +132,20 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
             <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
               {post.category}
             </span>
+
+            {post.updatedDate ? (
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-300 font-bold">
+                <FaSyncAlt className="text-sky-600 animate-spin-slow" />
+                <span>Terupdate: {formatDate(post.updatedDate)}</span>
+              </div>
+            ) : (
+              <div className="flex items-center gap-1.5">
+                <FaClock />
+                <span>{formatDate(post.date)}</span>
+              </div>
+            )}
+
+            <span>•</span>
             <div className="flex items-center gap-1.5">
               <FaClock />
               <span>{post.readTime}</span>
@@ -154,12 +183,71 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
             </div>
           )}
           
+          {/* Main Article Text */}
           <div className="prose max-w-none space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
-            {post.content.map((paragraph, pIdx) => (
-              <p key={pIdx} className="whitespace-pre-line">
-                {paragraph}
-              </p>
-            ))}
+            {post.content.map((paragraph, pIdx) => {
+              const isWarning = paragraph.startsWith("Peringatan:") || paragraph.startsWith("Bahaya");
+              
+              if (isWarning) {
+                return (
+                  <div key={pIdx} className="p-5 rounded-2xl bg-amber-50 border border-amber-300 text-amber-900 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-amber-800 text-base">
+                      <FaExclamationTriangle className="text-amber-600 text-lg flex-shrink-0" />
+                      <span>{paragraph.split("\n")[0]}</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-amber-900 font-medium whitespace-pre-line leading-relaxed">
+                      {paragraph.split("\n").slice(1).join("\n")}
+                    </p>
+                  </div>
+                );
+              }
+
+              return (
+                <div key={pIdx} className="space-y-3">
+                  <p className="whitespace-pre-line">
+                    {paragraph}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Quick Highlight Feature Grid */}
+          <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-4 shadow-xl">
+            <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm tracking-wide uppercase">
+              <FaShieldAlt />
+              <span>Jaminan Layanan Klinik Pipa Bandung</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium">
+              <div className="flex items-start gap-2.5 bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700">
+                <FaCheckCircle className="text-emerald-400 text-base mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-white">100% Tanpa Bongkar Keramik</strong>
+                  <span className="text-slate-300">Pipa dilancarkan bersih dari afur luar tanpa membobok dinding & lantai.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700">
+                <FaCheckCircle className="text-emerald-400 text-base mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-white">Respon Cepat 24 Jam Nonstop</strong>
+                  <span className="text-slate-300">Teknisi terdekat meluncur ke lokasi rumah / usaha Anda di Bandung.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700">
+                <FaCheckCircle className="text-emerald-400 text-base mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-white">Garansi Tuntas 100%</strong>
+                  <span className="text-slate-300">Garansi kepuasan pengerjaan hingga aliran air terbukti lancar sempurna.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 bg-slate-800/80 p-3.5 rounded-2xl border border-slate-700">
+                <FaCheckCircle className="text-emerald-400 text-base mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="block text-white">Mesin Rooter & Water Jetting</strong>
+                  <span className="text-slate-300">Alat modern standar luar negeri untuk merontokkan kerak lemak batu.</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Tags */}
@@ -178,17 +266,17 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
           {/* Inline Emergency Banner */}
           <div className="p-6 rounded-3xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">Butuh Jasa Teknisi Langsung?</h3>
-              <p className="text-xs text-slate-600 font-medium">Tim Klinik Pipa siap meluncur ke lokasi Anda 24 jam.</p>
+              <h3 className="text-lg font-bold text-slate-900">Butuh Jasa Pelancar Saluran Mampet Bandung?</h3>
+              <p className="text-xs text-slate-600 font-medium">Tim Klinik Pipa siap meluncur ke lokasi Anda 24 jam nonstop.</p>
             </div>
             <a
-              href={`https://wa.me/${siteConfig.whatsappNumber}?text=Halo%20Klinik%20Pipa,%20saya%20membaca%20artikel%20${encodeURIComponent(post.title)}%20dan%20butuh%20bantuan%20jasa.`}
+              href={`https://wa.me/${siteConfig.whatsappNumber}?text=Halo%20Klinik%20Pipa,%20saya%20membaca%20artikel%20${encodeURIComponent(post.title)}%20dan%20butuh%20bantuan%20jasa%20saluran%20mampet.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-md shadow-emerald-600/20 hover:scale-105 transition-all flex-shrink-0"
             >
               <FaWhatsapp className="text-base" />
-              <span>Chat WA Teknisi</span>
+              <span>Chat WA Teknisi 24 Jam</span>
             </a>
           </div>
 
@@ -200,3 +288,4 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     </>
   );
 }
+
