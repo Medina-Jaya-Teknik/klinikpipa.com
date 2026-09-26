@@ -34,6 +34,16 @@ const defaultFaqs: FAQItem[] = [
     answer:
       "Ya, setiap pekerjaan dilengkapi garansi hasil. Titik bocor dijamin terdeteksi presisi dan pipa air keran dipastikan kembali jernih & bebas dari endapan kotoran.",
   },
+  {
+    question: "Berapa lama estimasi teknisi Klinik Pipa tiba di lokasi Bandung?",
+    answer:
+      "Untuk seluruh wilayah Kota Bandung dan Cimahi, armada teknisi terdekat kami rata-rata tiba di lokasi dalam 25 hingga 40 menit setelah Anda melakukan pemesanan via WhatsApp atau Telepon.",
+  },
+  {
+    question: "Mengapa tidak boleh menggunakan soda api untuk saluran mampet?",
+    answer:
+      "Soda api memicu reaksi kimia panas di atas 100°C yang dapat melumerkan sambungan lem pipa PVC, melengkungkan pipa di dalam tembok, dan mengubah lemak menjadi gumpalan sabun kapur yang membatu keras seperti semen.",
+  },
 ];
 
 export default function FAQSection({ faqs = defaultFaqs }: { faqs?: FAQItem[] }) {

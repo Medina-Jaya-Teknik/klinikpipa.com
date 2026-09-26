@@ -29,18 +29,21 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
     };
   }
 
-  const areaTitle = `Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet di ${areaData.name} - Klinik Pipa`;
-  const areaDesc = `Klinik Pipa melayani solusi pipa bocor tersembunyi, cuci detox pipa kotor, dan pelancaran saluran mampet 24 jam tanpa bongkar di ${areaData.name}, Bandung.`;
+  const areaTitle = `Solusi Pipa Bocor, Detox Pipa & Saluran Mampet di ${areaData.name} - Klinik Pipa`;
+  const areaDesc = `Klinik Pipa melayani deteksi pipa bocor tersembunyi akustik, cuci detox pipa air kotor, dan pelancaran saluran WC/wastafel mampet 24 jam tanpa bongkar di ${areaData.name}, Bandung.`;
 
   return {
     title: areaTitle,
     description: areaDesc,
     keywords: [
-      `jasa deteksi pipa bocor ${areaData.name.toLowerCase()}`,
+      `jasa saluran mampet ${areaData.name.toLowerCase()}`,
+      `deteksi pipa bocor ${areaData.name.toLowerCase()}`,
+      `pelancar wc mampet ${areaData.name.toLowerCase()}`,
       `detox pipa ${areaData.name.toLowerCase()}`,
-      `deteksi pipa bocor bandung ${areaData.name.toLowerCase()}`,
       `cuci pipa air bersih ${areaData.name.toLowerCase()}`,
       `tukang pipa bocor ${areaData.name.toLowerCase()}`,
+      `biaya deteksi pipa bocor ${areaData.name.toLowerCase()}`,
+      `saluran wastafel mampet ${areaData.name.toLowerCase()}`,
     ],
     alternates: {
       canonical: `${siteConfig.domain}/kota/${areaData.slug}`,
@@ -161,6 +164,56 @@ export default async function AreaPage({ params }: AreaPageProps) {
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
                 Melindungi keutuhan keramik & dinding rumah Anda di {areaData.name} dengan penanganan bergaransi.
               </p>
+            </div>
+          </div>
+
+          {/* Landmark Coverage Callout */}
+          {areaData.landmark && (
+            <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200 flex items-start gap-3 text-xs text-sky-950 font-medium">
+              <FaMapMarkerAlt className="text-sky-600 text-base mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="block text-sky-900 font-bold mb-1">
+                  Jangkauan Titik Layanan Sekitar {areaData.name}:
+                </strong>
+                Melayani perumahan, indekos, kafe, ruko, restoran, dan kantor di sekitar area {areaData.landmark} dan sekitarnya. Armada teknisi kami siap diberangkatkan 24 jam nonstop dengan respon cepat 20–40 menit!
+              </div>
+            </div>
+          )}
+
+          {/* Quick Services Link Cards */}
+          <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-4">
+            <h3 className="text-sm font-bold text-emerald-400 uppercase tracking-wider">
+              Layanan Spesialis Tersedia di Area {areaData.name}:
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+              <Link
+                href="/layanan"
+                className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 transition-all block"
+              >
+                <strong className="block text-white font-bold">Deteksi Pipa Bocor</strong>
+                <span className="text-slate-400">Sensor akustik & thermal tanpa bobok acak.</span>
+              </Link>
+              <Link
+                href="/layanan"
+                className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 transition-all block"
+              >
+                <strong className="block text-white font-bold">Cuci Detox Pipa</strong>
+                <span className="text-slate-400">Kuras kerak, lumpur & cacing air keran.</span>
+              </Link>
+              <Link
+                href="/layanan"
+                className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 transition-all block"
+              >
+                <strong className="block text-white font-bold">Saluran Mampet 24 Jam</strong>
+                <span className="text-slate-400">Pelancaran WC, wastafel & got tanpa bongkar.</span>
+              </Link>
+              <Link
+                href="/layanan"
+                className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 transition-all block"
+              >
+                <strong className="block text-white font-bold">Kamera Endoskop HD</strong>
+                <span className="text-slate-400">Inspeksi visual riil dalam saluran pipa.</span>
+              </Link>
             </div>
           </div>
 

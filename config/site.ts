@@ -104,6 +104,54 @@ export const siteConfig = {
       description: "Tukang deteksi pipa bocor bergaransi & hydro detox pipa air kotor area Kota Cimahi & sekitarnya.",
       landmark: "Alun-Alun Cimahi, Leuwigajah, Cihanjuang",
     },
+    {
+      slug: "kopo",
+      name: "Kopo / Babakan Ciparay",
+      description: "Layanan darurat deteksi pipa bocor bawah keramik & pelancaran saluran mampet area Kopo, Margahayu & sekitarnya 24 jam.",
+      landmark: "Miko Mall, Kopo Sayati, Terusan Kopo, Pasar Caringin",
+    },
+    {
+      slug: "lembang",
+      name: "Lembang / Bandung Barat",
+      description: "Jasa deteksi pipa air bocor villa & hunian serta detox kerak pipa air dingin/panas area Lembang & Maribaya.",
+      landmark: "Floating Market, Alun-Alun Lembang, Setiabudi Atas, Maribaya",
+    },
+    {
+      slug: "soreang",
+      name: "Soreang / Bandung Selatan",
+      description: "Spesialis deteksi kebocoran pipa air PDAM & pelancar saluran mampet tanpa bongkar di Soreang, Banjaran & Katapang.",
+      landmark: "Stadion Si Jalak Harupat, Komplek Pemda Soreang, Tol Soroja",
+    },
+    {
+      slug: "bojongsoang",
+      name: "Bojongsoang / Dayeuhkolot",
+      description: "Penanganan saluran mampet kosan/rumah tinggal & deteksi pipa bocor pompa air wilayah Bojongsoang & Baleendah.",
+      landmark: "Telkom University, Buah Batu Square, Podomoro Park",
+    },
+    {
+      slug: "batununggal",
+      name: "Batununggal / Mengger",
+      description: "Layanan profesional deteksi pipa bocor akustik, detox pipa keran berbau & pelancaran wastafel mampet Batununggal.",
+      landmark: "Komplek Batununggal Indah, Soekarno Hatta, Mengger",
+    },
+    {
+      slug: "pasteur",
+      name: "Pasteur / Sukasari",
+      description: "Pos reaksi cepat teknisi pelancar pipa mampet restoran/hotel & deteksi kebocoran pipa tanpa bobok area Pasteur.",
+      landmark: "Gerbang Tol Pasteur, Setrasari, Surya Sumantri, Maranatha",
+    },
+    {
+      slug: "cibiru",
+      name: "Cibiru / Gedebage",
+      description: "Jasa pelancar saluran got mampet, cuci pipa air bersih & deteksi pipa bocor area Cibiru, Panyileukan & Gedebage.",
+      landmark: "Bundaran Cibiru, UIN Sunan Gunung Djati, Stadion GBLA, Summarecon",
+    },
+    {
+      slug: "padalarang",
+      name: "Padalarang / KBP",
+      description: "Layanan deteksi pipa bocor tersembunyi & pembersihan saluran pembuangan mampet area Padalarang & Kota Baru Parahyangan.",
+      landmark: "Stasiun Whoosh Padalarang, Kota Baru Parahyangan, Tagog Padalarang",
+    },
   ] as AreaInfo[],
   services: [
     {

@@ -48,6 +48,31 @@ export function generateLocalBusinessSchema() {
       reviewCount: siteConfig.rating.reviewCount,
       bestRating: siteConfig.rating.bestRating,
     },
+    currenciesAccepted: "IDR",
+    paymentAccepted: "Cash, Transfer Bank, QRIS",
+    knowsAbout: [
+      "Deteksi Pipa Bocor",
+      "Detox Pipa Air Bersih",
+      "Pelancaran Saluran Mampet",
+      "Pembersihan Kerak Pipa",
+      "Plumbing",
+      "Kamera Endoskop Pipa",
+      "Hydro Jetting",
+      "Pelancar Kloset WC Mampet",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Layanan Spesialis Klinik Pipa",
+      itemListElement: siteConfig.services.map((s, idx) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          description: s.shortDesc,
+        },
+        position: idx + 1,
+      })),
+    },
     areaServed: siteConfig.areas.map((a) => ({
       "@type": "AdministrativeArea",
       name: `${a.name}, Bandung`,
@@ -56,6 +81,21 @@ export function generateLocalBusinessSchema() {
       `https://wa.me/${siteConfig.whatsappNumber}`,
       siteConfig.domain,
     ],
+  };
+}
+
+export function generateWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.domain}/#website`,
+    url: siteConfig.domain,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    inLanguage: "id-ID",
+    publisher: {
+      "@id": `${siteConfig.domain}/#organization`,
+    },
   };
 }
 
@@ -123,6 +163,8 @@ export function generateArticleSchema(article: {
   slug: string;
   author?: string;
   image?: string;
+  keywords?: string[];
+  wordCount?: number;
 }) {
   const imageUrl = article.image
     ? (article.image.startsWith("http") ? article.image : `${siteConfig.domain}${article.image}`)
@@ -134,12 +176,15 @@ export function generateArticleSchema(article: {
     headline: article.title,
     description: article.description,
     image: imageUrl,
+    inLanguage: "id-ID",
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteConfig.domain}/blog/${article.slug}`,
     },
+    keywords: article.keywords ? article.keywords.join(", ") : undefined,
+    wordCount: article.wordCount,
     author: {
       "@type": "Person",
       name: article.author || "Tim Teknisi Klinik Pipa",

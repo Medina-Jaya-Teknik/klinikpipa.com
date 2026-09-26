@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
-import { generateLocalBusinessSchema } from "@/lib/schema";
+import { generateLocalBusinessSchema, generateWebSiteSchema } from "@/lib/schema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -16,21 +16,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} - ${siteConfig.tagline}`,
+    default: `${siteConfig.name} - Solusi Pipa Bocor, Detox Pipa & Saluran Mampet 24 Jam Bandung`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
     "klinik pipa",
     "klinik pipa bandung",
-    "solusi pipa bocor",
-    "solusi pipa kotor",
-    "solusi pipa mampet",
+    "jasa saluran mampet bandung",
     "deteksi pipa bocor bandung",
+    "biaya deteksi pipa bocor",
     "detox pipa kotor bandung",
-    "cuci pipa air bersih",
-    "pelancaran saluran mampet bandung",
+    "cuci pipa air bersih bandung",
+    "pelancaran pipa mampet tanpa bongkar",
     "tukang pipa bocor bandung 24 jam",
+    "pelancar wc mampet bandung",
+    "saluran wastafel mampet bandung",
+    "kamera endoskop pipa bandung",
+    "hydro jetting bandung",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -96,6 +99,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const localBusinessSchema = generateLocalBusinessSchema();
+  const webSiteSchema = generateWebSiteSchema();
 
   return (
     <html lang="id" className={`${plusJakartaSans.variable} scroll-smooth`}>
@@ -104,11 +108,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png?v=2" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon-16x16.png?v=2" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
-        {/* Injected Global LocalBusiness JSON-LD Schema */}
+        {/* Injected Global LocalBusiness & WebSite JSON-LD Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify([localBusinessSchema, webSiteSchema]),
           }}
         />
       </head>
