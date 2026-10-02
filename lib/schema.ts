@@ -3,13 +3,16 @@ import { siteConfig } from "@/config/site";
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Plumber"],
+    "@type": ["LocalBusiness", "Plumber", "ProfessionalService", "HomeAndConstructionBusiness"],
     "@id": `${siteConfig.domain}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.domain,
     logo: `${siteConfig.domain}/logo%20landscape.png`,
-    image: `${siteConfig.domain}/logo%20dan%20nama.png`,
+    image: [
+      `${siteConfig.domain}/logo%20dan%20nama.png`,
+      `${siteConfig.domain}/images/hero-banner.webp`,
+    ],
     telephone: siteConfig.phone,
     priceRange: siteConfig.priceRange,
     description: siteConfig.description,
@@ -25,6 +28,15 @@ export function generateLocalBusinessSchema() {
       "@type": "GeoCoordinates",
       latitude: siteConfig.address.geo.latitude,
       longitude: siteConfig.address.geo.longitude,
+    },
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: siteConfig.address.geo.latitude,
+        longitude: siteConfig.address.geo.longitude,
+      },
+      geoRadius: "35000",
     },
     openingHoursSpecification: [
       {
@@ -47,9 +59,78 @@ export function generateLocalBusinessSchema() {
       ratingValue: siteConfig.rating.ratingValue,
       reviewCount: siteConfig.rating.reviewCount,
       bestRating: siteConfig.rating.bestRating,
+      worstRating: "1",
     },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Bambang Sudrajat",
+        },
+        datePublished: "2026-08-14",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Titik pipa bocor di bawah keramik teras langsung ketemu dalam 45 menit pakai alat sensor akustik. Hanya bongkar 1 keramik, tagihan PDAM langsung normal kembali!",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Rina Kusuma Dewi",
+        },
+        datePublished: "2026-09-02",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Air keran di rumah kuning dan berbau besi. Setelah di-detox hydro flushing oleh Klinik Pipa, keluar kerak hitam banyak sekali. Sekarang airnya super jernih dan lancar.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Hendrik Gunawan",
+        },
+        datePublished: "2026-09-18",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Wastafel restoran kami mampet lemak tebal. Teknisi datang 30 menit ke lokasi Sukajadi dan lancar pakai mesin kawat spiral tanpa bongkar pipa. Mantap dan bergaransi.",
+      },
+    ],
     currenciesAccepted: "IDR",
-    paymentAccepted: "Cash, Transfer Bank, QRIS",
+    paymentAccepted: ["Cash", "Transfer Bank", "QRIS"],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.phone,
+      contactType: "customer service",
+      areaServed: "ID",
+      availableLanguage: ["Indonesian"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    },
     knowsAbout: [
       "Deteksi Pipa Bocor",
       "Detox Pipa Air Bersih",
@@ -59,7 +140,20 @@ export function generateLocalBusinessSchema() {
       "Kamera Endoskop Pipa",
       "Hydro Jetting",
       "Pelancar Kloset WC Mampet",
+      "Acoustic Leak Locator",
+      "Thermal Camera Pipe Inspection",
+      "Hydro Pressure Flushing",
+      "Rigid Spiral Rooter",
     ],
+    potentialAction: {
+      "@type": "CommunicateAction",
+      target: `https://wa.me/${siteConfig.whatsappNumber}`,
+      name: "Konsultasi Cepat via WhatsApp 24 Jam",
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "p.text-slate-700", "p.text-slate-600"],
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Layanan Spesialis Klinik Pipa",
@@ -148,10 +242,37 @@ export function generateServiceSchema(serviceName?: string, serviceDesc?: string
     offers: {
       "@type": "Offer",
       priceCurrency: "IDR",
-      price: "300000",
+      price: "150000",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
     },
+  };
+}
+
+export function generateHowToSchema(data: {
+  name: string;
+  description: string;
+  totalTime?: string;
+  steps: { name: string; text: string; image?: string }[];
+  tools?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: data.name,
+    description: data.description,
+    totalTime: data.totalTime || "PT15M",
+    tool: (data.tools || []).map((tool) => ({
+      "@type": "HowToTool",
+      name: tool,
+    })),
+    step: data.steps.map((step, idx) => ({
+      "@type": "HowToStep",
+      position: idx + 1,
+      name: step.name,
+      text: step.text,
+      image: step.image ? `${siteConfig.domain}${step.image}` : undefined,
+    })),
   };
 }
 
@@ -167,7 +288,9 @@ export function generateArticleSchema(article: {
   wordCount?: number;
 }) {
   const imageUrl = article.image
-    ? (article.image.startsWith("http") ? article.image : `${siteConfig.domain}${article.image}`)
+    ? article.image.startsWith("http")
+      ? article.image
+      : `${siteConfig.domain}${article.image}`
     : `${siteConfig.domain}/logo%20landscape.png`;
 
   return {
@@ -187,11 +310,18 @@ export function generateArticleSchema(article: {
     wordCount: article.wordCount,
     author: {
       "@type": "Person",
-      name: article.author || "Tim Teknisi Klinik Pipa",
+      name: article.author || "Tim Ahli Klinik Pipa",
+      jobTitle: "Spesialis Deteksi Kebocoran & Pemipaan",
+      worksFor: {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.domain,
+      },
     },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
+      url: siteConfig.domain,
       logo: {
         "@type": "ImageObject",
         url: `${siteConfig.domain}/logo%20landscape.png`,

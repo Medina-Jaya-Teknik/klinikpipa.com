@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
@@ -13,6 +13,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0284c7",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
@@ -20,6 +28,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  category: "Plumbing Service",
   keywords: [
     "klinik pipa",
     "klinik pipa bandung",
@@ -45,6 +54,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.domain,
+  },
+  other: {
+    "geo.region": "ID-JB",
+    "geo.placename": "Bandung",
+    "geo.position": "-6.8928;107.5959",
+    "ICBM": "-6.8928, 107.5959",
   },
   icons: {
     icon: [

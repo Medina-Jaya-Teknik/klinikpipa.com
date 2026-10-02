@@ -268,7 +268,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Berapa biaya jasa cuci detox pipa air bersih di Bandung?",
         answer:
-          "Biaya detox pipa di Klinik Pipa sangat terjangkau, mulai dari Rp1.000.000 tergantung pada jumlah lantai rumah, jumlah titik keran, dan panjang jalur instalasi pemipaan.",
+          "Biaya detox pipa di Klinik Pipa sangat terjangkau, mulai dari Rp450.000 tergantung pada jumlah lantai rumah, jumlah titik keran, dan panjang jalur instalasi pemipaan.",
       },
       {
         question: "Apakah pipa PVC lama berisiko pecah saat di-detox?",
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Berapa biaya jasa deteksi pipa bocor di Bandung?",
         answer:
-          "Biaya deteksi pipa bocor di Klinik Pipa mulai dari Rp1.500.000 untuk rumah tinggal standar, sudah mencakup pemindaian menggunakan sensor akustik dan kamera termal bergaransi akurat.",
+          "Biaya deteksi pipa bocor di Klinik Pipa termurah di Bandung, mulai dari Rp650.000 untuk rumah tinggal standar, sudah mencakup pemindaian menggunakan sensor akustik dan kamera termal bergaransi akurat.",
       },
       {
         question: "Apakah Klinik Pipa juga melayani perbaikan pipanya setelah titik bocor ditemukan?",
@@ -356,14 +356,14 @@ export const blogPosts: BlogPost[] = [
       "Berikut adalah panduan lengkap estimasi biaya layanan deteksi pipa bocor, pelancaran saluran mampet, dan cuci detox pipa air bersih di wilayah Bandung Raya untuk tahun 2026:",
       "## 1. Biaya Jasa Pelancaran Saluran Pipa Mampet (Mesin Spiral Tanpa Bongkar)",
       "Layanan pelancaran pipa tersumbat kami menggunakan mesin kabel spiral fleksibel torsi tinggi dengan garansi tuntas lancar:",
-      "- **Saluran Wastafel Dapur (Kitchen Sink):** Mulai Rp300.000 – Rp450.000 (pembersihan sumbatan lemak beku & sisa makanan).\n- **Saluran Floor Drain Kamar Mandi:** Mulai Rp300.000 – Rp450.000 (pengangkatan gumpalan rambut, daki, dan buih sabun).\n- **Kloset WC Tersumbat Benda Asing:** Mulai Rp350.000 – Rp500.000 (pelancaran leher angsa dari pembalut, mainan, atau tisu).\n- **Saluran Talang Air / Got Pembuangan Utama:** Mulai Rp400.000 – Rp650.000 (pembersihan pasir lumpur, daun, dan sampah padat).\n- **Grease Trap Restoran / Kafe:** Mulai Rp500.000 – Rp900.000 (pengikisan tumpukan lemak jenuh komersial).",
+      "- **Saluran Wastafel Dapur (Kitchen Sink):** Mulai Rp150.000 – Rp250.000 (pembersihan sumbatan lemak beku & sisa makanan).\n- **Saluran Floor Drain Kamar Mandi:** Mulai Rp150.000 – Rp250.000 (pengangkatan gumpalan rambut, daki, dan buih sabun).\n- **Kloset WC Tersumbat Benda Asing:** Mulai Rp180.000 – Rp300.000 (pelancaran leher angsa dari pembalut, mainan, atau tisu).\n- **Saluran Talang Air / Got Pembuangan Utama:** Mulai Rp200.000 – Rp350.000 (pembersihan pasir lumpur, daun, dan sampah padat).\n- **Grease Trap Restoran / Kafe:** Mulai Rp250.000 – Rp450.000 (pengikisan tumpukan lemak jenuh komersial).",
       "## 2. Biaya Jasa Deteksi Pipa Bocor Tersembunyi (Sensor Akustik & Thermal)",
       "Layanan pelacakan posisi kebocoran pipa air bersih (PDAM atau pompa pendorong) yang tertanam di balik tembok atau bawah lantai keramik tanpa pembobokan acak:",
-      "- **Deteksi Pipa Bocor Rumah Tinggal 1 Lantai:** Mulai Rp1.500.000 (pemindaian sensor akustik geofon + thermal camera).\n- **Deteksi Pipa Bocor Rumah Tinggal 2 Lantai / Ruko:** Mulai Rp1.800.000 – Rp2.500.000.\n- **Pabrik, Gedung Perkantoran, & Hotel:** Berdasarkan luas area dan hasil survey teknis di lokasi.",
+      "- **Deteksi Pipa Bocor Rumah Tinggal 1 Lantai:** Mulai Rp650.000 (pemindaian sensor akustik geofon + thermal camera).\n- **Deteksi Pipa Bocor Rumah Tinggal 2 Lantai / Ruko:** Mulai Rp850.000 – Rp1.200.000.\n- **Pabrik, Gedung Perkantoran, & Hotel:** Berdasarkan luas area dan hasil survey teknis di lokasi.",
       "Biaya di atas sudah termasuk penandaan titik bocor presisi hingga 99%. Jasa perbaikan sambungan pipa baru yang rusak dapat langsung dikerjakan oleh tim kami dengan biaya fitting dan material yang disepakati bersama.",
       "## 3. Biaya Jasa Detox Cuci Pipa Air Bersih (Hydro Pressure Flushing)",
       "Pembersihan total kerak hitam, karat logam, lumpur, dan cacing di dalam jalur pipa air minum tanpa menggunakan bahan kimia beracun:",
-      "- **Rumah Tinggal 1 Lantai (Hingga 5 Titik Keran):** Mulai Rp1.000.000.\n- **Rumah Tinggal 2 Lantai (6 - 10 Titik Keran):** Mulai Rp1.300.000 – Rp1.800.000.\n- **Rumah Kost / Penginapan / Ruko (10+ Titik Keran):** Mulai Rp2.000.000 – Rp3.000.000.",
+      "- **Rumah Tinggal 1 Lantai (Hingga 5 Titik Keran):** Mulai Rp450.000.\n- **Rumah Tinggal 2 Lantai (6 - 10 Titik Keran):** Mulai Rp700.000 – Rp950.000.\n- **Rumah Kost / Penginapan / Ruko (10+ Titik Keran):** Mulai Rp1.000.000 – Rp1.500.000.",
       "## Faktor yang Mempengaruhi Biaya Pengerjaan",
       "1. **Tingkat Keparahan & Kekerasan Sumbatan:** Pipa yang tersumbat adukan semen cor pasca renovasi membutuhkan mata pisau bor khusus dibandingkan sumbatan lemak dapur biasa.\n2. **Panjang & Diameter Jalur Pipa:** Jangkauan pengerjaan pipa di atas 20 meter memerlukan penambahan modul spiral.\n3. **Aksesibilitas Titik Masuk Pipa:** Kemudahan teknisi dalam menjangkau lubang kontrol atau lubang afur.",
       "💡 Tips Cerdas: Menunda perbaikan pipa bocor atau menggunakan soda api justru akan memicu biaya renovasi yang jauh lebih mahal. Hubungi WhatsApp Klinik Pipa untuk konsultasi gratis dan mendapatkan estimasi harga pasti sebelum pengerjaan.",
@@ -473,7 +473,7 @@ export const blogPosts: BlogPost[] = [
       "### 2. Masalah Saluran Pipa Kloset Tersumbat (Membutuhkan Jasa Pelancar Pipa Mampet)",
       "- **Penyebab:** Ada sumbatan benda padat fisik di leher angsa kloset (S-trap) atau di sepanjang pipa penghubung antara kloset dan septic tank (jarak 2 hingga 10 meter).\n- **Ciri Khas:** Masalah sering terjadi secara mendadak; hanya 1 kloset tertentu yang mampet sementara kloset di kamar mandi lain berfungsi normal; tidak ada bau septic tank meluap di luar rumah.\n- **Benda Pemicu:** Tisu basah, pembalut wanita, mainan plastik anak, bungkus sachet sampo, pengharum kloset gantung yang jatuh terlepas, atau tumpukan kerak kotoran keras.",
       "## Tabel Panduan Cepat: Sedot WC vs Jasa Pelancar Pipa Mampet",
-      "| Indikator Gejala | Butuh Jasa Sedot WC Truk | Butuh Jasa Pelancar Pipa Mampet |\n|---|---|---|\n| Terjadinya Masalah | Lambat bertahap selama berminggu-minggu | Terjadi mendadak setelah ada pemakaian |\n| Jumlah Kloset Terdampak | Semua kloset di lantai bawah meluap | Hanya 1 kloset tertentu yang macet |\n| Riwayat Penyedotan | Belum pernah disedot > 3 tahun | Baru disedot tapi masih meluap |\n| Alat yang Digunakan | Truk tangki selang hisap vakum besar | Mesin kawat spiral mekanik (rooter) |\n| Biaya Rata-Rata | Rp400.000 - Rp800.000 / rit tangki | Rp350.000 - Rp500.000 / pengerjaan |",
+      "| Indikator Gejala | Butuh Jasa Sedot WC Truk | Butuh Jasa Pelancar Pipa Mampet |\n|---|---|---|\n| Terjadinya Masalah | Lambat bertahap selama berminggu-minggu | Terjadi mendadak setelah ada pemakaian |\n| Jumlah Kloset Terdampak | Semua kloset di lantai bawah meluap | Hanya 1 kloset tertentu yang macet |\n| Riwayat Penyedotan | Belum pernah disedot > 3 tahun | Baru disedot tapi masih meluap |\n| Alat yang Digunakan | Truk tangki selang hisap vakum besar | Mesin kawat spiral mekanik (rooter) |\n| Biaya Rata-Rata | Rp400.000 - Rp800.000 / rit tangki | Rp150.000 - Rp300.000 / pengerjaan |",
       "## Bagaimana Klinik Pipa Menangani Kloset WC Mampet Tanpa Rusak Keramik?",
       "Jika masalah Anda adalah pipa kloset tersumbat benda padat, tim teknisi Klinik Pipa menggunakan mesin spiral khusus sanitasi (closet auger) dengan kepala pengait berulir:",
       "- Alat masuk meliuk melewati leher angsa porselen tanpa menggores atau memecahkan mangkuk kloset.\n- Mengait dan menarik keluar benda asing (tisu basah, pembalut, kain) keluar dari pipa.\n- Mengikis kerak tinja keras yang menempel di belokan elbow pipa bawah lantai.\n- Mengembalikan kelancaran gelontoran air kloset seperti kondisi baru dalam waktu kurang dari 45 menit pengerjaan.",

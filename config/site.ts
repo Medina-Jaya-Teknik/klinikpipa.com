@@ -37,7 +37,7 @@ export const siteConfig = {
     },
   },
   openingHours: "Mo-Su 00:00-23:59",
-  priceRange: "Rp300.000 - Rp1.500.000+",
+  priceRange: "Rp150.000 - Rp850.000+",
   rating: {
     ratingValue: "4.9",
     reviewCount: "412",
@@ -161,7 +161,7 @@ export const siteConfig = {
       fullDesc:
         "Tagihan air melonjak atau tembok sering rembes? Kami melacak posisi pasti pipa bocor halus yang tertanam di bawah lantai beton atau dinding tanpa perlu membongkar sembarangan beserta pengerjaan perbaikan presisi.",
       iconName: "FaSearchLocation",
-      price: "Mulai Rp1.500.000",
+      price: "Mulai Rp650.000",
       features: [
         "Teknologi Acoustic Leak Locator & Thermal Camera",
         "Akurasi titik bocor hingga 99%",
@@ -176,7 +176,7 @@ export const siteConfig = {
       fullDesc:
         "Air keran keruh, kuning, berbau, atau mengalir kecil? Metode Hydro Flushing Pressure Detox membersihkan seluruh kerak dan kuman yang mengendap di sepanjang pipa air bersih Anda secara aman.",
       iconName: "FaBroom",
-      price: "Mulai Rp1.000.000",
+      price: "Mulai Rp450.000",
       features: [
         "Pembersihan kerak & bio-film cacing tanpa kimia berbahaya",
         "Teknologi Hydro Pressure Flushing modern",
@@ -191,7 +191,7 @@ export const siteConfig = {
       fullDesc:
         "Memvisualisasikan kondisi riil bagian dalam pipa buangan maupun air bersih secara real-time. Mengetahui posisi sumbatan keras, patahan pipa, atau pergeseran sambungan elbow.",
       iconName: "FaEye",
-      price: "Mulai Rp300.000",
+      price: "Mulai Rp150.000",
       features: [
         "Kamera kabel flexible HD waterproof",
         "Layar monitor langsung di lokasi",
@@ -206,7 +206,7 @@ export const siteConfig = {
       fullDesc:
         "Pembersihan sumbatan lemak keras, rambut, dan sampah padat pada saluran air buangan dengan mesin spiral fleksibel profesional tanpa merusak pipa PVC.",
       iconName: "FaTools",
-      price: "Mulai Rp300.000",
+      price: "Mulai Rp150.000",
       features: [
         "Mengikis lemak & sumbatan tanpa bongkar keramik",
         "Mesin Spiral Heavy-Duty bertenaga tinggi",

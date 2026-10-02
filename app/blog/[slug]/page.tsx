@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog-data";
 import { siteConfig } from "@/config/site";
-import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema } from "@/lib/schema";
 import {
   FaClock,
   FaUser,
@@ -187,6 +187,60 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
 
   if (post.faqs && post.faqs.length > 0) {
     jsonLdSchemas.push(generateFAQSchema(post.faqs));
+  }
+
+  if (post.slug === "cara-mengatasi-saluran-kamar-mandi-mampet-floor-drain") {
+    jsonLdSchemas.push(
+      generateHowToSchema({
+        name: "Cara Mengatasi Saluran Kamar Mandi Mampet & Floor Drain Tersumbat",
+        description:
+          "Panduan praktis langkah demi langkah mengatasi saluran kamar mandi menggenang akibat tumpukan rambut dan sisa sabun secara mandiri.",
+        totalTime: "PT20M",
+        tools: ["Sarung tangan karet", "Kawat hanger baju", "Plunger karet", "Baking soda & cuka dapur"],
+        steps: [
+          {
+            name: "Bersihkan Tutup Grille & U-Trap Saringan Luar",
+            text: "Buka tutup saringan floor drain dan angkat mangkuk perangkap bau. Tarik gumpalan rambut yang membelit bibir saringan dan bersihkan dengan sikat gigi bekas.",
+          },
+          {
+            name: "Gunakan Kait Kawat Fleksibel",
+            text: "Luruskan gantungan kawat baju dan buat lekukan kait kecil di ujungnya. Masukkan ke lubang floor drain, putar perlahan untuk mengait gumpalan rambut, lalu tarik keluar.",
+          },
+          {
+            name: "Gunakan Plunger Karet",
+            text: "Pastikan ada sedikit genangan air, tempelkan mangkuk plunger menutupi seluruh lubang, lalu pompa secara ritmis 10-15 kali untuk mengurai ikatan rambut.",
+          },
+          {
+            name: "Gelontor dengan Baking Soda + Cuka Alami",
+            text: "Tuang 1 cangkir baking soda disusul 1 cangkir cuka putih. Diamkan 30 menit lalu bilas dengan air panas kuku.",
+          },
+        ],
+      })
+    );
+  } else if (post.slug === "tanda-pipa-air-bocor-tersembunyi-dinding") {
+    jsonLdSchemas.push(
+      generateHowToSchema({
+        name: "Cara Melakukan Tes Kebocoran Pipa Mandiri (Uji Meteran PDAM)",
+        description:
+          "Langkah mudah memeriksa kebocoran pipa tersembunyi di balik dinding atau bawah lantai melalui meteran air PDAM.",
+        totalTime: "PT10M",
+        tools: ["Meteran air PDAM"],
+        steps: [
+          {
+            name: "Matikan Seluruh Keran Air",
+            text: "Pastikan tidak ada orang di rumah yang sedang mandi, menyalakan mesin cuci, atau menggunakan air.",
+          },
+          {
+            name: "Tutup Katup Toren Air",
+            text: "Kunci katup pengisian toren agar penampungan tidak mengisi secara otomatis.",
+          },
+          {
+            name: "Periksa Dial Meteran PDAM",
+            text: "Amati indikator jarum putar merah kecil (dial leak detector). Jika terus berputar pelan meski keran mati, dipastikan ada kebocoran aktif di jalur pipa distribusi.",
+          },
+        ],
+      })
+    );
   }
 
   // Related posts (same category or others, excluding current)
