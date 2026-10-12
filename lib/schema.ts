@@ -362,12 +362,49 @@ export function generateProductServiceSchema(data: {
       priceCurrency: "IDR",
       price: data.price || "150000",
       priceValidUntil: "2026-12-31",
+      validFrom: "2026-01-01T00:00:00+07:00",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: {
         "@type": "Organization",
         name: siteConfig.name,
         url: siteConfig.domain,
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "ID",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 30,
+        returnMethod: "https://schema.org/ReturnInStore",
+        returnFees: "https://schema.org/FreeReturn",
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "IDR",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "ID",
+          addressRegion: "Jawa Barat",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 0,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "DAY",
+          },
+        },
       },
     },
     aggregateRating: {
@@ -480,7 +517,44 @@ export function generateAreaPageGraphSchema(
           priceCurrency: "IDR",
           price: "150000",
           priceValidUntil: "2026-12-31",
+          validFrom: "2026-01-01T00:00:00+07:00",
           availability: "https://schema.org/InStock",
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            applicableCountry: "ID",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 30,
+            returnMethod: "https://schema.org/ReturnInStore",
+            returnFees: "https://schema.org/FreeReturn",
+          },
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0",
+              currency: "IDR",
+            },
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "ID",
+              addressRegion: "Jawa Barat",
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "DAY",
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 1,
+                unitCode: "DAY",
+              },
+            },
+          },
         },
         aggregateRating: {
           "@type": "AggregateRating",
