@@ -9,10 +9,10 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* 4 Columns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
-          
+
           {/* Column 1: Brand Info & NAP (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block bg-white px-3.5 py-2 rounded-xl shadow-md hover:scale-105 transition-transform">
@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-medium gap-4">
           <p>© {currentYear} {siteConfig.name}. Hak Cipta Dilindungi Undang-Undang.</p>
           <p className="flex items-center gap-2">
-            <span>Specialized Local SEO & Plumbing Services Bandung</span>
+            <span>Specialized Plumbing Services Bandung</span>
           </p>
         </div>
 

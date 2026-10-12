@@ -7,9 +7,11 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Blog & Tips Perawatan Pipa Saluran Mampet Bandung",
+  title: {
+    absolute: "Blog & Tips Pipa Bocor Saluran Mampet Bandung",
+  },
   description:
-    "Kumpulan artikel, solusi DIY, tips mengatasi pipa bocor & mampet, dan rekomendasi perawatan detox pipa dari teknisi Klinik Pipa.",
+    "Tips & solusi pipa bocor, cuci detox & saluran mampet 24 jam Bandung. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/blog`,
   },

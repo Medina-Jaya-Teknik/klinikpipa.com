@@ -29,11 +29,13 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
     };
   }
 
-  const areaTitle = `Solusi Pipa Bocor, Detox Pipa & Saluran Mampet di ${areaData.name} - Klinik Pipa`;
-  const areaDesc = `Klinik Pipa melayani deteksi pipa bocor tersembunyi akustik, cuci detox pipa air kotor, dan pelancaran saluran WC/wastafel mampet 24 jam tanpa bongkar di ${areaData.name}, Bandung.`;
+  const areaTitle = `Jasa Pipa Bocor & Saluran Mampet ${areaData.name} - 24 Jam`;
+  const areaDesc = `Jasa pipa bocor & saluran mampet 24 jam ${areaData.name} tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.`;
 
   return {
-    title: areaTitle,
+    title: {
+      absolute: areaTitle,
+    },
     description: areaDesc,
     keywords: [
       `jasa saluran mampet ${areaData.name.toLowerCase()}`,

@@ -1,6 +1,9 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  servicePrice?: string;
   excerpt: string;
   category: string;
   date: string;
@@ -17,6 +20,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "tanda-pipa-air-bocor-tersembunyi-dinding",
     title: "7 Tanda Pipa Air Bocor Tersembunyi di Dinding & Cara Deteksi Tanpa Bongkar",
+    metaTitle: "7 Tanda Pipa Air Bocor di Dinding & Deteksi Akurat",
+    metaDescription:
+      "Ciri pipa air bocor di tembok & keramik. Deteksi sensor akustik tanpa bobok bergaransi. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "650000",
     excerpt:
       "Kenali gejala kebocoran pipa air PDAM atau pompa tersembunyi di balik tembok beton dan bawah keramik lantai, cara uji meteran air mandiri, serta solusi pelacakan sensor akustik presisi.",
     category: "Deteksi Pipa Bocor",
@@ -75,6 +82,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "apa-itu-detox-pipa-air-bersih-bandung",
     title: "Apa Itu Detox Pipa Air Bersih? Solusi Air Keran Kuning, Keruh & Berbau Besi",
+    metaTitle: "Apa Itu Detox Pipa Air? Solusi Air Keran Kuning & Keruh",
+    metaDescription:
+      "Solusi air keran kuning & keruh. Cuci pipa Hydro Flushing tanpa kimia, bergaransi. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "450000",
     excerpt:
       "Pelajari metode pencucian pipa air minum & keran rumah menggunakan teknologi Hydro Pressure Flushing untuk menguras kerak hitam, endapan karat, dan cacing tanpa bahan kimia beracun.",
     category: "Detox Pipa Kotor",
@@ -129,6 +140,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "keunggulan-mesin-spiral-rigid-pelancarkan-saluran",
     title: "Teknologi Kamera Endoskop & Mesin Spiral Rigid: Pelancar Saluran Mampet Tanpa Rusak Pipa",
+    metaTitle: "Mesin Spiral Rigid & Endoskop: Pelancar Saluran Mampet",
+    metaDescription:
+      "Pelancar saluran mampet mesin spiral & endoskop tanpa bongkar keramik, garansi. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
     excerpt:
       "Mengapa penggunaan soda api sangat berbahaya bagi pipa PVC rumah? Pelajari kombinasi inspeksi visual kamera endoskop HD dan mesin kabel spiral rigid bertenaga tinggi untuk melancarkan saluran mampet tanpa bongkar keramik.",
     category: "Teknologi Peralatan",
@@ -182,6 +197,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jasa-saluran-mampet-bandung",
     title: "Jasa Saluran Mampet Bandung 24 Jam - Solusi Pipa WC, Wastafel & Got Tersumbat",
+    metaTitle: "Jasa Saluran Mampet Bandung 24 Jam - Tanpa Bongkar",
+    metaDescription:
+      "Jasa saluran mampet Bandung 24 jam. Atasi WC & wastafel tersumbat tanpa bongkar. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
     excerpt:
       "Layanan profesional pelancaran saluran pipa mampet 24 jam di Bandung untuk WC tersumbat, wastafel dapur penuh lemak, floor drain kamar mandi, dan pipa got pembuangan air kotor tanpa bongkar keramik, garansi 100% lancar.",
     category: "Saluran Mampet",
@@ -237,6 +256,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jasa-detox-pipa-kotor-bandung",
     title: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih Bebas Kerak & Cacing",
+    metaTitle: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih",
+    metaDescription:
+      "Jasa cuci detox pipa air bersih Bandung alami tanpa kimia. Bebas kerak & cacing. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "450000",
     excerpt:
       "Layanan jasa cuci detox pipa air bersih kotor di Bandung menggunakan teknologi Hydro Pressure Flushing alami tanpa zat kimia. Menghilangkan kerak hitam, bau karat, dan cacing keran bergaransi.",
     category: "Detox Pipa Kotor",
@@ -285,6 +308,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jasa-deteksi-pipa-bocor-bandung",
     title: "Jasa Deteksi Pipa Bocor Bandung - Pelacakan Sensor Akustik & Thermal Tanpa Bobok",
+    metaTitle: "Jasa Deteksi Pipa Bocor Bandung - Tanpa Bobok & Garansi",
+    metaDescription:
+      "Jasa deteksi pipa bocor Bandung tanpa bobok. Akurat 99%, garansi & respon 24 jam. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "650000",
     excerpt:
       "Layanan jasa deteksi lokasi pipa air bocor tersembunyi di dalam tembok atau bawah lantai di Bandung menggunakan teknologi sensor geofon akustik & thermal imaging camera presisi tinggi bergaransi.",
     category: "Deteksi Pipa Bocor",
@@ -334,6 +361,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "biaya-deteksi-pipa-bocor-bandung-harga-saluran-mampet",
     title: "Biaya Deteksi Pipa Bocor Bandung & Harga Jasa Saluran Mampet 2026: Panduan Transparan",
+    metaTitle: "Biaya Deteksi Pipa Bocor Bandung & Saluran Mampet 2026",
+    metaDescription:
+      "Biaya deteksi pipa bocor & saluran mampet Bandung 2026. Transparan & bergaransi. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
     excerpt:
       "Rincian lengkap biaya deteksi pipa air bocor tersembunyi, tarif jasa pelancar saluran mampet (WC, wastafel, got), dan harga cuci detox pipa air bersih di Bandung. Tanpa biaya tersembunyi, bergaransi resmi.",
     category: "Biaya & Estimasi",
@@ -389,6 +420,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cara-mengatasi-saluran-kamar-mandi-mampet-floor-drain",
     title: "Cara Mengatasi Saluran Kamar Mandi & Floor Drain Mampet Tersumbat Rambut dan Sabun",
+    metaTitle: "Cara Mengatasi Saluran Kamar Mandi Mampet Tersumbat",
+    metaDescription:
+      "Cara atasi saluran kamar mandi mampet rambut & sabun. Teknisi siap 24 jam. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
     excerpt:
       "Panduan praktis langkah demi langkah mengatasi saluran pembuangan air kamar mandi yang menggenang dan berbau akibat tumpukan rambut rontok, daki, dan sisa sabun mandi secara aman.",
     category: "Tips & Trik DIY",
@@ -446,6 +481,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "perbedaan-sedot-wc-vs-pelancar-pipa-mampet",
     title: "Perbedaan Sedot WC vs Jasa Pelancar Saluran WC Mampet: Mana yang Anda Butuhkan?",
+    metaTitle: "Sedot WC vs Pelancar Pipa Mampet: Mana Yang Anda Butuh?",
+    metaDescription:
+      "Kloset WC mampet? Pahami beda septic tank penuh vs pipa tersumbat. Teknisi 24 jam. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "180000",
     excerpt:
       "Banyak orang salah memanggil jasa saat kloset WC tidak bisa disiram. Pahami perbedaan mendasar antara tangki septic tank penuh vs saluran pipa kloset tersumbat agar tidak buang-buang uang.",
     category: "Edukasi Konsumen",
@@ -495,6 +534,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cara-mengatasi-wastafel-dapur-mampet-lemak",
     title: "Cara Melancarkan Wastafel Dapur Tersumbat Lemak Beku Membandel Tanpa Merusak Pipa",
+    metaTitle: "Cara Melancarkan Wastafel Dapur Mampet Lemak Beku",
+    metaDescription:
+      "Cara atasi wastafel dapur mampet lemak beku tanpa bongkar pipa. Teknisi 24 jam. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
     excerpt:
       "Trik jitu melancarkan wastafel cuci piring (kitchen sink) yang mampet total akibat kerak lemak minyak beku. Cara mencairkan lemak tanpa soda api dan perawatan pipa dapur jangka panjang.",
     category: "Tips & Trik DIY",

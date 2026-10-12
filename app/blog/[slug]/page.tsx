@@ -2,7 +2,13 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog-data";
 import { siteConfig } from "@/config/site";
-import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema } from "@/lib/schema";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateHowToSchema,
+  generateProductServiceSchema,
+} from "@/lib/schema";
 import {
   FaClock,
   FaUser,
@@ -49,16 +55,21 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
       : `${siteConfig.domain}${post.image}`
     : `${siteConfig.domain}/logo%20landscape.png`;
 
+  const pageTitle = post.metaTitle || `${post.title} - Klinik Pipa Bandung`;
+  const pageDesc = post.metaDescription || post.excerpt;
+
   return {
-    title: `${post.title} - Klinik Pipa Bandung`,
-    description: post.excerpt,
+    title: {
+      absolute: pageTitle,
+    },
+    description: pageDesc,
     keywords: post.tags,
     alternates: {
       canonical: `${siteConfig.domain}/blog/${post.slug}`,
     },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: pageTitle,
+      description: pageDesc,
       url: `${siteConfig.domain}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
@@ -68,14 +79,14 @@ export async function generateMetadata({ params }: BlogSlugProps): Promise<Metad
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: pageTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: pageTitle,
+      description: pageDesc,
       images: [imageUrl],
     },
   };
@@ -183,7 +194,16 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     { name: post.title, url: `/blog/${post.slug}` },
   ]);
 
-  const jsonLdSchemas: object[] = [articleSchema, breadcrumbSchema];
+  const productServiceSchema = generateProductServiceSchema({
+    name: post.metaTitle || post.title,
+    description: post.metaDescription || post.excerpt,
+    url: `${siteConfig.domain}/blog/${post.slug}`,
+    image: post.image,
+    price: post.servicePrice || "150000",
+    category: post.category,
+  });
+
+  const jsonLdSchemas: object[] = [articleSchema, breadcrumbSchema, productServiceSchema];
 
   if (post.faqs && post.faqs.length > 0) {
     jsonLdSchemas.push(generateFAQSchema(post.faqs));

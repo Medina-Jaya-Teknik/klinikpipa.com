@@ -330,6 +330,103 @@ export function generateArticleSchema(article: {
   };
 }
 
+export function generateProductServiceSchema(data: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  price?: string;
+  category?: string;
+}) {
+  const imageUrl = data.image
+    ? data.image.startsWith("http")
+      ? data.image
+      : `${siteConfig.domain}${data.image}`
+    : `${siteConfig.domain}/images/layanan-deteksi-bocor.webp`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${data.url}/#product-service`,
+    name: data.name,
+    image: imageUrl,
+    description: data.description,
+    category: data.category || "Jasa Pipa Air Bandung",
+    brand: {
+      "@type": "Brand",
+      name: siteConfig.name,
+    },
+    offers: {
+      "@type": "Offer",
+      url: data.url,
+      priceCurrency: "IDR",
+      price: data.price || "150000",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.domain,
+      },
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.rating.ratingValue,
+      reviewCount: siteConfig.rating.reviewCount,
+      bestRating: siteConfig.rating.bestRating,
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Bambang Sudrajat",
+        },
+        datePublished: "2026-08-14",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Titik pipa bocor di bawah keramik teras langsung ketemu dalam 45 menit pakai alat sensor akustik. Hanya bongkar 1 keramik, tagihan PDAM langsung normal kembali!",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Rina Kusuma Dewi",
+        },
+        datePublished: "2026-09-02",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Air keran di rumah kuning dan berbau besi. Setelah di-detox hydro flushing oleh Klinik Pipa, keluar kerak hitam banyak sekali. Sekarang airnya super jernih dan lancar.",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Hendrik Gunawan",
+        },
+        datePublished: "2026-09-18",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        reviewBody:
+          "Wastafel restoran kami mampet lemak tebal. Teknisi datang 30 menit ke lokasi Sukajadi dan lancar pakai mesin kawat spiral tanpa bongkar pipa. Mantap dan bergaransi.",
+      },
+    ],
+  };
+}
+
 export function generateAreaPageGraphSchema(
   areaName: string,
   areaSlug: string,
@@ -358,6 +455,39 @@ export function generateAreaPageGraphSchema(
           "@type": "GeoCoordinates",
           latitude: siteConfig.address.geo.latitude,
           longitude: siteConfig.address.geo.longitude,
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: siteConfig.rating.ratingValue,
+          reviewCount: siteConfig.rating.reviewCount,
+          bestRating: siteConfig.rating.bestRating,
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "Product",
+        "@id": `${pageUrl}/#product`,
+        name: `Jasa Deteksi Pipa Bocor & Saluran Mampet di ${areaName}`,
+        image: `${siteConfig.domain}/images/layanan-deteksi-bocor.webp`,
+        description: `Layanan deteksi kebocoran pipa air tanpa bongkar dan pelancar saluran mampet 24 jam bergaransi di ${areaName}, Bandung.`,
+        brand: {
+          "@type": "Brand",
+          name: siteConfig.name,
+        },
+        offers: {
+          "@type": "Offer",
+          url: pageUrl,
+          priceCurrency: "IDR",
+          price: "150000",
+          priceValidUntil: "2026-12-31",
+          availability: "https://schema.org/InStock",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: siteConfig.rating.ratingValue,
+          reviewCount: siteConfig.rating.reviewCount,
+          bestRating: siteConfig.rating.bestRating,
+          worstRating: "1",
         },
       },
       generateBreadcrumbSchema([

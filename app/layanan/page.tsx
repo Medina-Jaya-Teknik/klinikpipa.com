@@ -1,13 +1,15 @@
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema, generateProductServiceSchema } from "@/lib/schema";
 import { FaCheckCircle, FaWhatsapp, FaPhoneAlt, FaTools } from "react-icons/fa";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet - Klinik Pipa",
+  title: {
+    absolute: "Jasa Pipa Bocor & Saluran Mampet Bandung - Klinik Pipa",
+  },
   description:
-    "Layanan Klinik Pipa: solusi pipa bocor tersembunyi (sensor akustik/thermal), cuci detox pipa air kotor, dan pelancaran saluran mampet 24 jam tanpa bobok di Bandung.",
+    "Jasa deteksi pipa bocor, detox & saluran mampet 24 jam Bandung tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/layanan`,
   },
@@ -19,6 +21,14 @@ export default function LayananPage() {
     { name: "Beranda", url: "/" },
     { name: "Layanan", url: "/layanan" },
   ]);
+  const productServiceSchema = generateProductServiceSchema({
+    name: "Layanan Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung",
+    description:
+      "Jasa deteksi pipa bocor tersembunyi akustik, pencucian kerak pipa air bersih, dan pelancaran pipa mampet 24 jam bergaransi di Bandung.",
+    url: `${siteConfig.domain}/layanan`,
+    image: "/images/layanan-deteksi-bocor.webp",
+    price: "150000",
+  });
 
   const serviceImageMap: Record<string, string> = {
     "deteksi-pipa-bocor": "/images/layanan-deteksi-bocor.webp",
@@ -31,7 +41,9 @@ export default function LayananPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, breadcrumbSchema]) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([serviceSchema, breadcrumbSchema, productServiceSchema]),
+        }}
       />
 
       {/* Header Banner */}
