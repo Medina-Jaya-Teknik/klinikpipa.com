@@ -17,11 +17,12 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block bg-white px-3.5 py-2 rounded-xl shadow-md hover:scale-105 transition-transform">
               <Image
-                src="/logo-transparent.png"
+                src="/logo-transparent.webp"
                 alt={`${siteConfig.name} - ${siteConfig.tagline}`}
                 width={200}
                 height={60}
                 className="h-10 sm:h-12 w-auto object-contain"
+                loading="lazy"
               />
             </Link>
 

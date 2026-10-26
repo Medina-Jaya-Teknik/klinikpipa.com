@@ -43,7 +43,7 @@ export default function Navbar() {
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/logo-transparent.png"
+            src="/logo-transparent.webp"
             alt={`${siteConfig.name} - ${siteConfig.tagline}`}
             width={220}
             height={65}

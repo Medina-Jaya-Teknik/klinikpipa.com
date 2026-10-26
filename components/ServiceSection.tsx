@@ -33,13 +33,13 @@ export default function ServiceSection() {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-900 text-xs font-bold uppercase tracking-wider">
-            Layanan Unggulan Bandung
+            Layanan Unggulan Bandung & Sekitarnya
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet
+            Jasa Saluran Mampet, Deteksi Pipa Bocor & Detox Pipa Air Bandung
           </h2>
           <p className="text-slate-600 text-base">
-            Layanan profesional deteksi pipa bocor tersembunyi, cuci detox pipa air bersih, dan pelancaran saluran mampet 24 jam tanpa bongkar sembarangan.
+            Layanan ahli pelancaran pipa saluran mampet terdekat, cuci detox pipa air kotor berkerak, serta inspeksi titik pipa bocor 24 jam tanpa bongkar keramik bergaransi.
           </p>
         </div>
 

@@ -1,0 +1,58 @@
+name: Klinik Pipa - SEO Master Scheduler
+
+on:
+  schedule:
+    # Setiap Senin jam 01:00 UTC (08:00 WIB) - Query Mining & Keyword Report
+    - cron: '0 1 * * 1'
+    # Setiap Rabu jam 01:00 UTC (08:00 WIB) - Site Health & PageSpeed Audit
+    - cron: '0 1 * * 3'
+
+  # Memungkinkan trigger manual dari tab Actions di GitHub
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Pilih Mode Audit'
+        required: true
+        default: 'monday'
+        type: choice
+        options:
+          - monday
+          - wednesday
+          - all
+          - test
+
+jobs:
+  run-seo-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Jalankan SEO Bot Scheduler
+        env:
+          SITE_URL: "https://klinikpipa.com"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
+          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            DAY=$(date +%u)
+            if [ "$DAY" -eq 1 ]; then
+              node scripts/seo-bot.js --mode=monday
+            elif [ "$DAY" -eq 3 ]; then
+              node scripts/seo-bot.js --mode=wednesday
+            fi
+          elif [ "${{ inputs.mode }}" = "test" ]; then
+            node scripts/seo-bot.js --test
+          elif [ "${{ inputs.mode }}" = "all" ]; then
+            node scripts/seo-bot.js
+          else
+            node scripts/seo-bot.js --mode=${{ inputs.mode }}
+          fi

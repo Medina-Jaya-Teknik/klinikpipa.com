@@ -23,19 +23,19 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 shadow-sm border border-sky-300/60 backdrop-blur-md">
               <span className="flex h-2.5 w-2.5 rounded-full bg-sky-500 animate-ping" />
               <span className="text-xs font-bold text-sky-900 tracking-wide">
-                Solusi Pipa Bocor, Pipa Kotor dan Pipa Mampet 24 Jam
+                Jasa Saluran Mampet & Pipa Bocor Bandung Terdekat (24 Jam)
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] text-slate-900">
-              Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet{" "}
+              Jasa Saluran Mampet & Pipa Bocor Bandung{" "}
               <span className="text-gradient-vibrant">Tanpa Bongkar</span>
             </h1>
 
             {/* Sub-headline Description */}
             <p className="text-slate-700 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-              <strong className="text-slate-900 font-bold">Klinik Pipa</strong> melacak titik pipa bocor tersembunyi dengan <strong className="text-sky-800 font-bold">Sensor Akustik & Thermal Camera</strong>, cuci <strong className="text-emerald-700 font-bold">Detox Pipa Kotor</strong> dari kerak & cacing, serta pelancaran <strong className="text-purple-800 font-bold">Saluran Mampet</strong> 24 jam tanpa bobok sembarangan!
+              <strong className="text-slate-900 font-bold">Klinik Pipa</strong> adalah penyedia <strong className="text-purple-800 font-bold">jasa saluran mampet Bandung terdekat</strong> 24 jam dengan mesin spiral modern, deteksi akurat titik <strong className="text-sky-800 font-bold">jasa deteksi pipa bocor Bandung</strong> menggunakan sensor akustik & thermal camera, serta cuci <strong className="text-emerald-700 font-bold">detox pipa air kotor</strong> bergaransi!
             </p>
 
             {/* Trust Badges Pills */}

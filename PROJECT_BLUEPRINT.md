@@ -190,3 +190,9 @@ Saat membuat project baru berbasis blueprint ini, ikuti urutan berikut:
 10. [ ] **Testing & Verification**:
     - Validasi Rich Results Google (`schema.org` validator).
     - Cek kepatuhan Lighthouse SEO (Target 100/100).
+11. [x] **Automated SEO Master Scheduler (Monitoring & Maintenance)**:
+    - `scripts/seo-bot.js` (Google Search Console Query Mining, PageSpeed mobile audit, Site health check, Telegram alerts).
+    - `.github/workflows/seo-scheduler.yml` (Otomatisasi terjadwal Senin & Rabu 08:00 WIB via GitHub Actions).
+    - `package.json` (`npm run seo-bot` & `npm run seo-test`).
+    - `.env.example` untuk panduan credentials.
+

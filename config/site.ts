@@ -156,8 +156,8 @@ export const siteConfig = {
   services: [
     {
       id: "deteksi-pipa-bocor",
-      name: "Deteksi Kebocoran Pipa & Perbaikan",
-      shortDesc: "Pelacakan akurat titik pipa bocor di dalam dinding/lantai menggunakan sensor geofon akustik & thermal imaging beserta perbaikan.",
+      name: "Jasa Deteksi Pipa Bocor & Perbaikan",
+      shortDesc: "Pelacakan akurat jasa deteksi pipa bocor Bandung di dinding/lantai menggunakan sensor akustik & thermal imaging tanpa bobok acak.",
       fullDesc:
         "Tagihan air melonjak atau tembok sering rembes? Kami melacak posisi pasti pipa bocor halus yang tertanam di bawah lantai beton atau dinding tanpa perlu membongkar sembarangan beserta pengerjaan perbaikan presisi.",
       iconName: "FaSearchLocation",
@@ -171,10 +171,10 @@ export const siteConfig = {
     },
     {
       id: "detox-pipa-kotor",
-      name: "Cuci Detox Pipa Air Bersih",
-      shortDesc: "Pembersihan total kerak hitam, bio-film, lumpur, & cacing di dalam jalur pipa air minum/keran rumah.",
+      name: "Jasa Cuci Detox Pipa Air Bersih",
+      shortDesc: "Jasa detox pipa air Bandung & pembersihan kerak pipa kotor, bio-film, lumpur, serta cacing di instalasi air rumah.",
       fullDesc:
-        "Air keran keruh, kuning, berbau, atau mengalir kecil? Metode Hydro Flushing Pressure Detox membersihkan seluruh kerak dan kuman yang mengendap di sepanjang pipa air bersih Anda secara aman.",
+        "Air keran keruh, kuning, berbau, atau mengalir kecil? Layanan detox pipa air Bandung membersihkan seluruh kerak dan kuman yang mengendap di sepanjang pipa air bersih Anda secara aman tanpa kimia berbahaya.",
       iconName: "FaBroom",
       price: "Mulai Rp450.000",
       features: [
@@ -201,10 +201,10 @@ export const siteConfig = {
     },
     {
       id: "pelancaran-saluran-mampet",
-      name: "Pelancaran & Perbaikan Saluran Mampet",
-      shortDesc: "Pelancaran pipa wastafel, WC, got, dan floor drain mampet menggunakan kawat spiral fleksibel bertenaga tinggi.",
+      name: "Jasa Saluran Mampet Bandung Terdekat",
+      shortDesc: "Jasa saluran mampet Bandung terdekat untuk pelancaran wastafel, WC, got, dan pipa pembuangan 24 jam tanpa bongkar keramik.",
       fullDesc:
-        "Pembersihan sumbatan lemak keras, rambut, dan sampah padat pada saluran air buangan dengan mesin spiral fleksibel profesional tanpa merusak pipa PVC.",
+        "Pembersihan sumbatan lemak keras, rambut, dan sampah padat pada saluran air buangan dengan mesin spiral fleksibel profesional tanpa merusak pipa PVC bergaransi tuntas.",
       iconName: "FaTools",
       price: "Mulai Rp150.000",
       features: [

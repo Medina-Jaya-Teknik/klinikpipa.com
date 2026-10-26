@@ -7,7 +7,9 @@
     "build": "next build",
     "postbuild": "node scripts/indexnow.js",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo-bot": "node scripts/seo-bot.js",
+    "seo-test": "node scripts/seo-bot.js --test"
   },
   "dependencies": {
     "next": "16.3.1",
