@@ -49,7 +49,9 @@ export default function BlogPage() {
       <section className="py-16 md:py-24 bg-white text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {[...blogPosts]
+              .sort((a, b) => b.date.localeCompare(a.date))
+              .map((post) => (
               <article
                 key={post.slug}
                 className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-sky-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group overflow-hidden"

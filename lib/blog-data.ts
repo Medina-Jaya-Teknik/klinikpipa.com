@@ -18,11 +18,78 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "tanda-pipa-air-bocor-tersembunyi-dinding",
-    title: "7 Tanda Pipa Air Bocor Tersembunyi di Dinding & Cara Deteksi Tanpa Bongkar",
-    metaTitle: "7 Tanda Pipa Air Bocor di Dinding & Deteksi Akurat",
+    slug: "ahli-mampet-terdekat-bandung",
+    title: "Ahli Mampet Terdekat Bandung: WC, Wastafel & Got Lancar Tanpa Bongkar",
+    metaTitle: "Ahli Mampet Terdekat Bandung - Siaga 24 Jam",
     metaDescription:
-      "Ciri pipa air bocor di tembok & keramik. Deteksi sensor akustik tanpa bobok bergaransi. Hubungi ☎️ 0898-9890-071.",
+      "Ahli mampet terdekat Bandung untuk WC, wastafel, dan got. Jasa saluran mampet tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
+    servicePrice: "150000",
+    excerpt:
+      "Cara memilih ahli mampet terdekat di Bandung yang datang cepat, memakai mesin spiral, dan tidak membongkar keramik untuk WC, wastafel, floor drain, maupun got.",
+    category: "Saluran Mampet",
+    date: "2026-11-06",
+    author: "Tim Ahli Klinik Pipa",
+    readTime: "7 menit baca",
+    tags: [
+      "Ahli Mampet Terdekat",
+      "Jasa Saluran Mampet Terdekat",
+      "Jasa Saluran Mampet Bandung",
+      "Jasa Saluran Mampet",
+      "Pelancar WC Mampet",
+      "Wastafel Mampet Bandung",
+    ],
+    image: "/images/blog/jasa-saluran-mampet-bandung.webp",
+    content: [
+      "Air wastafel yang tidak surut atau kloset yang naik ke bibir mangkuk jarang bisa menunggu sampai besok. Yang dibutuhkan saat itu adalah ahli mampet terdekat: teknisi yang sudah berada di Bandung, membawa mesin spiral, dan bisa menilai sumbatan tanpa membobok lantai lebih dulu.",
+      "Klinik Pipa menempatkan armada di dalam Kota Bandung dan Cimahi. Untuk sebagian besar lokasi, teknisi tiba dalam 25–45 menit setelah lokasi dan gejala dikirim lewat WhatsApp.",
+      "## Ahli Mampet Terdekat Itu Bukan Tukang yang Menebak",
+      "Banyak panggilan darurat berakhir dengan keramik pecah karena sumbatan ditebak dari genangan di permukaan. Air limbah merambat, jadi titik basah di lantai sering bukan titik macetnya.",
+      "Ahli mampet terdekat yang tepat melakukan tiga hal sebelum menyentuh lantai:",
+      "1. **Menanyakan gejala.** Satu kloset saja yang macet biasanya sumbatan pipa. Semua kloset meluap bersamaan, apalagi septic tank belum disedot bertahun-tahun, sering berarti tangki penuh — itu pekerjaan sedot WC, bukan pelancar pipa.\n2. **Masuk lewat lubang yang sudah ada.** Afur wastafel, floor drain, atau leher kloset. Mesin spiral mengikuti belokan pipa tanpa mengangkat keramik.\n3. **Uji air deras di depan pemilik rumah.** Pekerjaan selesai kalau aliran kembali deras, bukan hanya kalau air sempat surut sebentar.",
+      "## Kapan Jasa Saluran Mampet Terdekat Perlu Dipanggil",
+      "Coba plunger atau bersihkan saringan luar dulu jika genangannya masih dangkal. Panggil jasa saluran mampet terdekat bila salah satu kondisi ini muncul:",
+      "- Air kamar mandi menggenang sampai mata kaki meski saringan rambut sudah dibersihkan.\n- Wastafel dapur penuh lemak dan berbau, lalu air hangat serta sabun cuci piring tidak melancarkan.\n- Kloset naik pelan setelah ada benda jatuh: tisu basah, pembalut, mainan, atau kemasan sampo.\n- Got atau talang meluap ke halaman setiap hujan, dengan daun dan pasir menyumbat jalur utama.",
+      "Hindari soda api. Panas reaksinya bisa melunakkan lem sambungan PVC dan mengubah lemak dapur menjadi gumpalan keras. Detail bahayanya ada di artikel [mesin spiral dan kamera endoskop](/blog/keunggulan-mesin-spiral-rigid-pelancarkan-saluran).",
+      "## Jasa Saluran Mampet Bandung: Apa yang Dikerjakan di Lokasi",
+      "Jasa saluran mampet Bandung di Klinik Pipa mencakup empat titik yang paling sering macet:",
+      "### WC dan leher angsa",
+      "Spiral sanitasi masuk lewat mangkuk kloset, mengait tisu atau kain, lalu mengikis kerak di belokan pipa. Mangkuk duduk jarang perlu dicopot.",
+      "### Wastafel dapur",
+      "Mata pisau pemotong lemak mengikis lapisan minyak beku di pipa bawah lantai. Minyak jelantah sebaiknya ditampung, tidak dituang ke bak cuci.",
+      "### Floor drain kamar mandi",
+      "Rambut dan sabun membentuk sumbatan berserat. Setelah spiral, pasang saringan rambut agar helai baru tidak masuk lagi.",
+      "### Got dan talang",
+      "Pasir, daun, dan plastik di jalur pembuangan utama dibersihkan dari lubang kontrol, bukan dengan membongkar carport.",
+      "Alur layanan lengkap ada di [jasa saluran mampet Bandung](/blog/jasa-saluran-mampet-bandung). Perbandingan dengan sedot WC ada di [artikel septic tank vs pipa tersumbat](/blog/perbedaan-sedot-wc-vs-pelancar-pipa-mampet).",
+      "## Jangkauan Ahli Mampet Terdekat",
+      "Pos teknisi mencakup Kota Bandung (Sukajadi, Cicendo, Dago, Antapani, Buahbatu, Kopo, Pasteur, Cibiru), Cimahi, serta Lembang, Soreang, Bojongsoang, dan Padalarang. Di luar radius itu, estimasi kedatangan disampaikan dulu sebelum teknisi berangkat.",
+      "Biaya jasa saluran mampet mulai Rp150.000 untuk wastafel atau floor drain standar. Rincian per titik ada di [panduan biaya 2026](/blog/biaya-deteksi-pipa-bocor-bandung-harga-saluran-mampet). Angka pasti dikirim sebelum pengerjaan, setelah gejala dan lokasi diketahui.",
+      "💡 Tips Teknisi: Foto genangan dan sebutkan apakah hanya satu titik yang macet. Informasi itu membantu ahli mampet terdekat membawa mata pisau yang sesuai dan menghindari kunjungan yang ternyata butuh truk sedot WC.",
+    ],
+    faqs: [
+      {
+        question: "Berapa lama ahli mampet terdekat tiba di Bandung?",
+        answer:
+          "Untuk Kota Bandung dan Cimahi, teknisi Klinik Pipa biasanya tiba dalam 25 hingga 45 menit setelah pemesanan, tergantung lalu lintas.",
+      },
+      {
+        question: "Apakah jasa saluran mampet harus membongkar keramik?",
+        answer:
+          "Tidak untuk sumbatan lemak, rambut, atau benda asing. Kabel spiral masuk lewat afur, floor drain, atau kloset. Bongkar hanya dibahas jika kamera menunjukkan pipa patah.",
+      },
+      {
+        question: "Bagaimana jika kloset tetap mampet setelah septic tank disedot?",
+        answer:
+          "Itu tanda pipa penghubung yang tersumbat, bukan tangki yang penuh. Pelancar spiral menangani jalur itu tanpa memanggil truk tangki lagi.",
+      },
+    ],
+  },
+  {
+    slug: "tanda-pipa-air-bocor-tersembunyi-dinding",
+    title: "Cara Mengetahui Kebocoran Pipa Air di Rumah: 7 Tanda & Tes Meteran",
+    metaTitle: "Cara Mengetahui Kebocoran Pipa Air di Rumah",
+    metaDescription:
+      "Cara mengetahui kebocoran pipa air di rumah lewat tes meteran PDAM. Deteksi tanpa bongkar. Hubungi ☎️ 0898-9890-071.",
     servicePrice: "650000",
     excerpt:
       "Kenali gejala kebocoran pipa air PDAM atau pompa tersembunyi di balik tembok beton dan bawah keramik lantai, cara uji meteran air mandiri, serta solusi pelacakan sensor akustik presisi.",
@@ -41,6 +108,8 @@ export const blogPosts: BlogPost[] = [
     ],
     image: "/images/blog/tanda-pipa-air-bocor-tersembunyi-dinding.webp",
     content: [
+      "## Cara Mengetahui Kebocoran Pipa Air di Rumah",
+      "Cara mengetahui kebocoran pipa air di rumah paling cepat: tutup semua keran, hentikan isi toren, lalu amati jarum kecil meteran PDAM. Jarum yang tetap berputar berarti ada kebocoran setelah meteran. Gabungkan tes itu dengan tujuh tanda di bawah sebelum memanggil tukang untuk membobok tembok.",
       "Kebocoran pipa air bersih yang tertanam di dalam dinding semen atau di bawah lapisan keramik lantai merupakan salah satu mimpi buruk terbesar bagi pemilik rumah, pengelola ruko, kos-kosan, maupun penginapan di Bandung Raya.",
       "Berbeda dengan keran bocor yang terlihat jelas oleh mata, kebocoran tersembunyi (hidden pipe leak) bekerja secara perlahan namun merusak struktur bangunan secara masif. Jika dibiarkan berlarut-larut, ribuan liter air bersih akan terbuang sia-sia, tagihan PDAM melonjak tak terkendali, dan fondasi dinding rumah menjadi keropos berjamur.",
       "## 7 Tanda Utama Pipa Air Bocor Tersembunyi di Rumah Anda",
@@ -222,6 +291,8 @@ export const blogPosts: BlogPost[] = [
       "Saluran pembuangan air mampet adalah salah satu situasi darurat paling menyebalkan yang bisa dialami oleh pemilik rumah, pengelola kafe, restoran, indekos, maupun gedung perkantoran di Bandung.",
       "Bayangkan: cucian piring menumpuk karena wastafel dapur meluap, air kamar mandi menggenang setinggi mata kaki saat mandi terburu-buru sebelum berangkat kerja, atau kloset WC tidak bisa disiram saat ada tamu berkunjung. Situasi ini bukan hanya mengganggu kenyamanan, tetapi juga menyebarkan bau busuk dan mengundang kecoa serta kuman penyakit.",
       "Klinik Pipa hadir sebagai penyedia **Jasa Saluran Mampet Bandung 24 Jam Nonstop** dengan teknologi kawat spiral fleksibel dan water jetting bertekanan tinggi yang terbukti melancarkan sumbatan paling membandel sekalipun tanpa perlu membongkar lantai keramik rumah Anda!",
+      "## Jasa Saluran Mampet Terdekat Saat WC atau Wastafel Darurat",
+      "Jasa saluran mampet terdekat berarti teknisi berangkat dari pos di dalam kota, bukan dari luar daerah. Untuk Bandung dan Cimahi, kedatangan biasanya 25–45 menit. Hubungi lewat [halaman layanan](/layanan) atau WhatsApp agar estimasi biaya disampaikan sebelum pengerjaan dimulai.",
       "## 5 Jenis Saluran Mampet yang Paling Sering Kami Tangani",
       "1. **Saluran Wastafel Dapur (Kitchen Sink) Penuh Lemak Membatu**\nSisa minyak goreng, kuah gulai, mentega, dan santan yang tercuci di wastafel akan mengalir ke pipa pembuangan. Di dalam pipa yang bersuhu lebih dingin, lemak ini membeku, menempel lapis demi lapis, dan mengeras seperti lilin batu kapur hingga menyumbat total jalur air.",
       "2. **Kloset WC Tersumbat Benda Asing**\nTisu basah yang tidak hancur oleh air, pembalut wanita, cotton bud pembersih telinga, bungkus shampo, atau mainan anak yang tidak sengaja terjatuh ke dalam mangkuk kloset dan tersangkut di leher angsa (trap kloset).",
@@ -256,9 +327,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jasa-detox-pipa-kotor-bandung",
     title: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih Bebas Kerak & Cacing",
-    metaTitle: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih",
+    metaTitle: "Cuci Pipa Bandung - Detox Bebas Kerak & Cacing",
     metaDescription:
-      "Jasa cuci detox pipa air bersih Bandung alami tanpa kimia. Bebas kerak & cacing. Hubungi ☎️ 0898-9890-071.",
+      "Cuci pipa air Bandung dengan detox tanpa kimia. Bebas kerak, bau karat, dan cacing. Hubungi ☎️ 0898-9890-071.",
     servicePrice: "450000",
     excerpt:
       "Layanan jasa cuci detox pipa air bersih kotor di Bandung menggunakan teknologi Hydro Pressure Flushing alami tanpa zat kimia. Menghilangkan kerak hitam, bau karat, dan cacing keran bergaransi.",
@@ -277,6 +348,8 @@ export const blogPosts: BlogPost[] = [
     ],
     image: "/images/blog/jasa-detox-pipa-kotor-bandung.webp",
     content: [
+      "## Cuci Pipa Air yang Keruh, Kuning, atau Berbau",
+      "Cuci pipa perlu dilakukan saat keran tetap kotor setelah toren dikuras. Kerak, lumpur, dan lendir menempel di puluhan meter pipa di dalam dinding, bukan hanya di tangki. Detox pipa air Bandung menguras endapan itu tanpa bahan kimia.",
       "Kualitas air bersih adalah fondasi kesehatan utama setiap keluarga. Namun di wilayah Bandung, banyak rumah tinggal, vila keluarga, dan gedung usaha yang menghadapi fenomena air keran keruh kecokelatan, meninggalkan noda kuning membandel di bak mandi dan wastafel, serta berbau karat menyengat.",
       "Sebagian besar masyarakat beranggapan bahwa solusinya hanyalah memasang filter air keran. Sayangnya, filter keran hanya menyaring di ujung keluaran dan cepat kotor menghitam dalam hitungan hari karena sumber masalah utamanya—yaitu **puluhan meter kerak kotoran di dinding dalam pipa instalasi rumah**—tidak pernah dibersihkan!",
       "## Apa Saja Kotoran yang Bersarang di Dalam Pipa Rumah Anda?",

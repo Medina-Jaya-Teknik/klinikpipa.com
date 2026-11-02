@@ -59,8 +59,8 @@ export default function ServiceSection() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={serviceImageMap[service.id]}
-                        alt={`${service.name} Bandung - Klinik Pipa`}
-                        title={`${service.name} 24 Jam Bandung - Tanpa Bongkar`}
+                        alt={`${service.heading} - Klinik Pipa`}
+                        title={`${service.heading} 24 jam tanpa bongkar`}
                         loading="lazy"
                         decoding="async"
                         width={600}
@@ -85,7 +85,7 @@ export default function ServiceSection() {
 
                   {/* Title & Desc */}
                   <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-700 transition-colors">
-                    {service.name}
+                    {service.heading}
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed mb-6">
                     {service.shortDesc}

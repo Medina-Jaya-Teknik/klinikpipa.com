@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} - Solusi Pipa Bocor, Detox Pipa & Saluran Mampet 24 Jam Bandung`,
+    default: `Ahli Mampet Terdekat & Cuci Pipa Bandung | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -33,6 +33,13 @@ export const metadata: Metadata = {
     "klinik pipa",
     "klinik pipa bandung",
     "jasa saluran mampet bandung",
+    "jasa saluran mampet terdekat",
+    "jasa saluran mampet",
+    "jasa deteksi pipa bocor bandung",
+    "detox pipa air bandung",
+    "ahli mampet terdekat",
+    "cuci pipa",
+    "cara mengetahui kebocoran pipa air di rumah",
     "deteksi pipa bocor bandung",
     "biaya deteksi pipa bocor",
     "detox pipa kotor bandung",

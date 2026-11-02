@@ -5,6 +5,16 @@ export interface FAQItem {
 
 export const defaultFaqs: FAQItem[] = [
   {
+    question: "Bagaimana cara mengetahui kebocoran pipa air di rumah?",
+    answer:
+      "Tutup semua keran dan isi toren, lalu lihat jarum kecil meteran PDAM. Jika jarum tetap berputar, ada kebocoran setelah meteran. Tanda lain: tagihan melonjak, pompa menyala sendiri, tembok lembab, atau suara desis di malam hari. Klinik Pipa melacak titiknya dengan sensor akustik tanpa membongkar keramik secara acak.",
+  },
+  {
+    question: "Di mana ahli mampet terdekat di Bandung?",
+    answer:
+      "Klinik Pipa siaga sebagai ahli mampet terdekat untuk Kota Bandung, Cimahi, dan sekitarnya. Teknisi jasa saluran mampet biasanya tiba dalam 25–45 menit, menangani WC, wastafel, floor drain, dan got tanpa bongkar keramik.",
+  },
+  {
     question: "Bagaimana cara mendeteksi pipa bocor di dalam dinding tanpa membongkar keramik?",
     answer:
       "Kami menggunakan sensor geofon frekuensi akustik dan kamera thermal imaging. Alat ini menangkap getaran suara air merembes & perbedaan suhu balik tembok secara akurat sehingga lokasi bocor diketahui pasti tanpa perlu membongkar sembarangan.",

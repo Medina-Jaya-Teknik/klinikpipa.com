@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 shadow-sm border border-sky-300/60 backdrop-blur-md">
               <span className="flex h-2.5 w-2.5 rounded-full bg-sky-500 animate-ping" />
               <span className="text-xs font-bold text-sky-900 tracking-wide">
-                Jasa Saluran Mampet & Pipa Bocor Bandung Terdekat (24 Jam)
+                Ahli Mampet Terdekat & Jasa Saluran Mampet Bandung (24 Jam)
               </span>
             </div>
 

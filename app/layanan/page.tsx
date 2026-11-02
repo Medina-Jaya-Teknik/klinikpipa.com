@@ -6,10 +6,10 @@ import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Jasa Pipa Bocor & Saluran Mampet Bandung - Klinik Pipa",
+    absolute: "Jasa Saluran Mampet Bandung 24 Jam | Klinik Pipa",
   },
   description:
-    "Jasa deteksi pipa bocor, detox & saluran mampet 24 jam Bandung tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
+    "Jasa saluran mampet terdekat, deteksi pipa bocor, dan detox pipa air Bandung. Cuci pipa tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/layanan`,
   },
@@ -22,9 +22,9 @@ export default function LayananPage() {
     { name: "Layanan", url: "/layanan" },
   ]);
   const productServiceSchema = generateProductServiceSchema({
-    name: "Layanan Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung",
+    name: "Jasa Saluran Mampet Bandung, Deteksi Pipa Bocor & Detox Pipa Air",
     description:
-      "Jasa deteksi pipa bocor tersembunyi akustik, pencucian kerak pipa air bersih, dan pelancaran pipa mampet 24 jam bergaransi di Bandung.",
+      "Jasa saluran mampet terdekat, jasa deteksi pipa bocor Bandung, dan detox pipa air Bandung. Cuci pipa serta pelancaran WC dan wastafel 24 jam tanpa bongkar.",
     url: `${siteConfig.domain}/layanan`,
     image: "/images/layanan-deteksi-bocor.webp",
     price: "150000",
@@ -53,10 +53,10 @@ export default function LayananPage() {
             Layanan Spesialis 24 Jam Bandung
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-            Solusi Pipa Bocor, Pipa Kotor & Pipa Mampet
+            Jasa Saluran Mampet Bandung & Deteksi Pipa Bocor
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto font-medium">
-            Klinik Pipa melayani deteksi pipa bocor tersembunyi, cuci detox pipa air kotor, dan pelancaran saluran mampet 24 jam tanpa bongkar sembarangan.
+            Ahli mampet terdekat untuk WC, wastafel, dan got. Plus jasa deteksi pipa bocor Bandung, detox pipa air Bandung, dan cuci pipa 24 jam tanpa bongkar sembarangan.
           </p>
         </div>
       </section>
@@ -83,17 +83,20 @@ export default function LayananPage() {
                   </div>
 
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    {service.name}
+                    {service.heading}
                   </h2>
+                  <h3 className="text-lg font-bold text-sky-800">
+                    {service.subheading}
+                  </h3>
 
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
                     {service.fullDesc}
                   </p>
 
                   <div className="space-y-2">
-                    <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                       Keunggulan Metode Pengerjaan:
-                    </h3>
+                    </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-800 font-semibold">
                       {service.features.map((feat, fIdx) => (
                         <li key={fIdx} className="flex items-center gap-2">
@@ -132,8 +135,8 @@ export default function LayananPage() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={imageSrc}
-                        alt={`${service.name} Bandung Spesialis Klinik Pipa`}
-                        title={`${service.name} 24 Jam Bandung Tanpa Bobok`}
+                        alt={`${service.heading} - Klinik Pipa`}
+                        title={`${service.heading} 24 Jam tanpa bongkar`}
                         loading="lazy"
                         decoding="async"
                         width={800}
@@ -144,7 +147,7 @@ export default function LayananPage() {
                         <span className="text-[11px] text-emerald-400 font-extrabold tracking-wider uppercase mb-1">
                           Teknologi Presisi Tanpa Bongkar
                         </span>
-                        <h3 className="text-lg font-bold text-white leading-snug">{service.name}</h3>
+                        <p className="text-lg font-bold text-white leading-snug">{service.name}</p>
                         <p className="text-xs text-slate-200 mt-1 line-clamp-2 font-medium">{service.shortDesc}</p>
                       </div>
                     </>

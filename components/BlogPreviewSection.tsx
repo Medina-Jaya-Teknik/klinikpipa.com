@@ -32,7 +32,10 @@ export default function BlogPreviewSection() {
 
         {/* Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.slice(0, 6).map((post) => (
+          {[...blogPosts]
+            .sort((a, b) => b.date.localeCompare(a.date))
+            .slice(0, 6)
+            .map((post) => (
             <article
               key={post.slug}
               className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-sky-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
