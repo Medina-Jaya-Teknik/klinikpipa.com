@@ -276,13 +276,6 @@ export function generateServiceSchema(serviceName?: string, serviceDesc?: string
         availability: "https://schema.org/InStock",
       })),
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.rating.ratingValue,
-      reviewCount: siteConfig.rating.reviewCount,
-      bestRating: siteConfig.rating.bestRating,
-      worstRating: "1",
-    },
   };
 }
 
@@ -562,13 +555,6 @@ export function generateAreaPageGraphSchema(
           price: "150000",
           priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: siteConfig.rating.ratingValue,
-          reviewCount: siteConfig.rating.reviewCount,
-          bestRating: siteConfig.rating.bestRating,
-          worstRating: "1",
         },
       },
       generateBreadcrumbSchema([

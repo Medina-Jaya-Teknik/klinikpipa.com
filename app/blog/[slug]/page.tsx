@@ -7,7 +7,6 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema,
   generateHowToSchema,
-  generateProductServiceSchema,
 } from "@/lib/schema";
 import {
   FaClock,
@@ -194,16 +193,7 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
     { name: post.title, url: `/blog/${post.slug}` },
   ]);
 
-  const productServiceSchema = generateProductServiceSchema({
-    name: post.metaTitle || post.title,
-    description: post.metaDescription || post.excerpt,
-    url: `${siteConfig.domain}/blog/${post.slug}`,
-    image: post.image,
-    price: post.servicePrice || "150000",
-    category: post.category,
-  });
-
-  const jsonLdSchemas: object[] = [articleSchema, breadcrumbSchema, productServiceSchema];
+  const jsonLdSchemas: object[] = [articleSchema, breadcrumbSchema];
 
   if (post.faqs && post.faqs.length > 0) {
     jsonLdSchemas.push(generateFAQSchema(post.faqs));
