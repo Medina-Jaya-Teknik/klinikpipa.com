@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import ServiceSection from "@/components/ServiceSection";
@@ -8,26 +9,48 @@ import { defaultFaqs } from "@/lib/faq-data";
 import BlogPreviewSection from "@/components/BlogPreviewSection";
 import MapSection from "@/components/MapSection";
 import CTASection from "@/components/CTASection";
-import { generateFAQSchema, generateProductServiceSchema } from "@/lib/schema";
+import { generateFAQSchema, generateServiceSchema } from "@/lib/schema";
 import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - Jasa Deteksi Pipa Bocor & Saluran Mampet Bandung 24 Jam`,
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.domain,
+  },
+  openGraph: {
+    title: `${siteConfig.name} - Jasa Deteksi Pipa Bocor & Saluran Mampet Bandung 24 Jam`,
+    description: siteConfig.description,
+    url: siteConfig.domain,
+    siteName: siteConfig.name,
+    locale: "id_ID",
+    type: "website",
+    images: [
+      {
+        url: `${siteConfig.domain}/logo%20landscape.png`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Solusi Pipa Bocor, Detox & Saluran Mampet Bandung`,
+      },
+    ],
+  },
+};
 
 export default function Home() {
   const faqSchema = generateFAQSchema(defaultFaqs);
-  const homeProductSchema = generateProductServiceSchema({
-    name: "Jasa Deteksi Pipa Bocor & Saluran Mampet Bandung - Klinik Pipa",
-    description: siteConfig.description,
-    url: siteConfig.domain,
-    image: "/images/hero-banner.webp",
-    price: "150000",
-  });
+  const homeServiceSchema = generateServiceSchema(
+    "Jasa Deteksi Pipa Bocor, Cuci Detox & Saluran Mampet Bandung",
+    siteConfig.description,
+    siteConfig.domain
+  );
 
   return (
     <>
-      {/* Homepage FAQ & Product Review Schema for Google Search Rich Snippets */}
+      {/* Homepage FAQ & Comprehensive Service Schema for Google Search Rich Snippets */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([faqSchema, homeProductSchema]),
+          __html: JSON.stringify([faqSchema, homeServiceSchema]),
         }}
       />
       <Hero />

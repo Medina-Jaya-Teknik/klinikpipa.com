@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { FaShieldAlt, FaUserShield, FaAward, FaSearchLocation, FaBroom } from "react-icons/fa";
+import { FaShieldAlt, FaUserShield, FaSearchLocation, FaBroom } from "react-icons/fa";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {

@@ -221,30 +221,67 @@ export function generateFAQSchema(faqs: { question: string; answer: string }[]) 
   };
 }
 
-export function generateServiceSchema(serviceName?: string, serviceDesc?: string) {
+export function generateServiceSchema(serviceName?: string, serviceDesc?: string, url?: string) {
+  const serviceUrl = url || `${siteConfig.domain}/layanan`;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: serviceName || "Jasa Deteksi Pipa Bocor & Detox Pipa",
+    "@id": `${serviceUrl}/#service`,
+    name: serviceName || "Jasa Deteksi Pipa Bocor & Saluran Mampet Bandung",
+    serviceType: serviceName || "Jasa Deteksi Pipa Bocor, Cuci Detox Pipa & Saluran Mampet",
     provider: {
       "@type": "LocalBusiness",
       name: siteConfig.name,
       telephone: siteConfig.phone,
       url: siteConfig.domain,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.address.street,
+        addressLocality: siteConfig.address.city,
+        addressRegion: siteConfig.address.province,
+        postalCode: siteConfig.address.postalCode,
+        addressCountry: siteConfig.address.country,
+      },
     },
-    areaServed: {
-      "@type": "City",
-      name: "Bandung",
-    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Bandung",
+      },
+      {
+        "@type": "City",
+        name: "Cimahi",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Bandung Raya",
+      },
+    ],
     description:
       serviceDesc ||
-      "Layanan deteksi pipa bocor tersembunyi dengan sensor akustik/thermal dan detox pencucian pipa air bersih kotor tanpa pembongkaran di area Bandung.",
+      "Layanan spesialis deteksi pipa bocor tersembunyi akustik & thermal, cuci detox pipa air bersih, dan pelancaran saluran mampet 24 jam tanpa pembongkaran bergaransi di Bandung.",
     offers: {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       priceCurrency: "IDR",
-      price: "150000",
-      priceValidUntil: "2026-12-31",
-      availability: "https://schema.org/InStock",
+      lowPrice: "150000",
+      highPrice: "850000",
+      offerCount: "4",
+      offers: siteConfig.services.map((svc) => ({
+        "@type": "Offer",
+        name: svc.heading,
+        description: svc.shortDesc,
+        priceCurrency: "IDR",
+        price: svc.price.replace(/[^0-9]/g, "") || "150000",
+        url: serviceUrl,
+        availability: "https://schema.org/InStock",
+      })),
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.rating.ratingValue,
+      reviewCount: siteConfig.rating.reviewCount,
+      bestRating: siteConfig.rating.bestRating,
+      worstRating: "1",
     },
   };
 }
@@ -502,14 +539,21 @@ export function generateAreaPageGraphSchema(
         },
       },
       {
-        "@type": "Product",
-        "@id": `${pageUrl}/#product`,
+        "@type": "Service",
+        "@id": `${pageUrl}/#service-offered`,
         name: `Jasa Deteksi Pipa Bocor & Saluran Mampet di ${areaName}`,
+        serviceType: "Jasa Deteksi Pipa Bocor, Cuci Pipa & Saluran Mampet",
         image: `${siteConfig.domain}/images/layanan-deteksi-bocor.webp`,
         description: `Layanan deteksi kebocoran pipa air tanpa bongkar dan pelancar saluran mampet 24 jam bergaransi di ${areaName}, Bandung.`,
-        brand: {
-          "@type": "Brand",
+        provider: {
+          "@type": "LocalBusiness",
           name: siteConfig.name,
+          telephone: siteConfig.phone,
+          url: siteConfig.domain,
+        },
+        areaServed: {
+          "@type": "City",
+          name: areaName,
         },
         offers: {
           "@type": "Offer",
@@ -517,44 +561,7 @@ export function generateAreaPageGraphSchema(
           priceCurrency: "IDR",
           price: "150000",
           priceValidUntil: "2026-12-31",
-          validFrom: "2026-01-01T00:00:00+07:00",
           availability: "https://schema.org/InStock",
-          hasMerchantReturnPolicy: {
-            "@type": "MerchantReturnPolicy",
-            applicableCountry: "ID",
-            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-            merchantReturnDays: 30,
-            returnMethod: "https://schema.org/ReturnInStore",
-            returnFees: "https://schema.org/FreeReturn",
-          },
-          shippingDetails: {
-            "@type": "OfferShippingDetails",
-            shippingRate: {
-              "@type": "MonetaryAmount",
-              value: "0",
-              currency: "IDR",
-            },
-            shippingDestination: {
-              "@type": "DefinedRegion",
-              addressCountry: "ID",
-              addressRegion: "Jawa Barat",
-            },
-            deliveryTime: {
-              "@type": "ShippingDeliveryTime",
-              handlingTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 0,
-                unitCode: "DAY",
-              },
-              transitTime: {
-                "@type": "QuantitativeValue",
-                minValue: 0,
-                maxValue: 1,
-                unitCode: "DAY",
-              },
-            },
-          },
         },
         aggregateRating: {
           "@type": "AggregateRating",

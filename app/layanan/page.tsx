@@ -1,34 +1,30 @@
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { generateServiceSchema, generateBreadcrumbSchema, generateProductServiceSchema } from "@/lib/schema";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { FaCheckCircle, FaWhatsapp, FaPhoneAlt, FaTools } from "react-icons/fa";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Jasa Saluran Mampet Bandung 24 Jam | Klinik Pipa",
+    absolute: "Layanan & Biaya Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung | Klinik Pipa",
   },
   description:
-    "Jasa saluran mampet terdekat, deteksi pipa bocor, dan detox pipa air Bandung. Cuci pipa tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
+    "Katalog layanan lengkap Klinik Pipa Bandung: deteksi pipa bocor akustik, cuci detox pipa air bersih, & pelancaran saluran mampet 24 jam tanpa bongkar, bergaransi. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/layanan`,
   },
 };
 
 export default function LayananPage() {
-  const serviceSchema = generateServiceSchema();
+  const serviceSchema = generateServiceSchema(
+    "Layanan Spesialis Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung",
+    "Katalog layanan lengkap deteksi pipa bocor akustik, pencucian kerak pipa air bersih, dan pelancaran pipa mampet 24 jam bergaransi di Bandung.",
+    `${siteConfig.domain}/layanan`
+  );
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Beranda", url: "/" },
     { name: "Layanan", url: "/layanan" },
   ]);
-  const productServiceSchema = generateProductServiceSchema({
-    name: "Jasa Saluran Mampet Bandung, Deteksi Pipa Bocor & Detox Pipa Air",
-    description:
-      "Jasa saluran mampet terdekat, jasa deteksi pipa bocor Bandung, dan detox pipa air Bandung. Cuci pipa serta pelancaran WC dan wastafel 24 jam tanpa bongkar.",
-    url: `${siteConfig.domain}/layanan`,
-    image: "/images/layanan-deteksi-bocor.webp",
-    price: "150000",
-  });
 
   const serviceImageMap: Record<string, string> = {
     "deteksi-pipa-bocor": "/images/layanan-deteksi-bocor.webp",
@@ -42,7 +38,7 @@ export default function LayananPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([serviceSchema, breadcrumbSchema, productServiceSchema]),
+          __html: JSON.stringify([serviceSchema, breadcrumbSchema]),
         }}
       />
 
@@ -53,10 +49,10 @@ export default function LayananPage() {
             Layanan Spesialis 24 Jam Bandung
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-            Jasa Saluran Mampet Bandung & Deteksi Pipa Bocor
+            Layanan Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto font-medium">
-            Ahli mampet terdekat untuk WC, wastafel, dan got. Plus jasa deteksi pipa bocor Bandung, detox pipa air Bandung, dan cuci pipa 24 jam tanpa bongkar sembarangan.
+            Spesialis deteksi pipa bocor tersembunyi akustik/thermal, cuci detox pipa air bersih, dan pelancaran saluran mampet 24 jam di Bandung dengan tarif transparan tanpa bongkar sembarangan.
           </p>
         </div>
       </section>

@@ -266,7 +266,7 @@ export default async function BlogSlugPage({ params }: BlogSlugProps) {
   // Related posts (same category or others, excluding current)
   const relatedPosts = blogPosts
     .filter((p) => p.slug !== post.slug)
-    .sort((a, b) => (a.category === post.category ? -1 : 1))
+    .sort((a, b) => (a.category === post.category ? -1 : b.category === post.category ? 1 : 0))
     .slice(0, 3);
 
   return (

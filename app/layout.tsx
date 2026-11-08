@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `Ahli Mampet Terdekat & Cuci Pipa Bandung | ${siteConfig.name}`,
+    default: `${siteConfig.name} - Jasa Deteksi Pipa Bocor & Saluran Mampet Bandung 24 Jam`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,

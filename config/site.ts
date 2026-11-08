@@ -22,7 +22,7 @@ export const siteConfig = {
   legalName: "Klinik Pipa Bandung",
   tagline: "Solusi pipa bocor, pipa kotor dan pipa mampet",
   description:
-    "Ahli mampet terdekat, jasa saluran mampet, dan cuci pipa Bandung. Deteksi bocor tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.",
+    "Jasa deteksi pipa bocor, cuci detox & saluran mampet 24 jam Bandung tanpa bongkar, bergaransi. Ahli mampet terdekat & cuci pipa. Hubungi ☎️ 0898-9890-071.",
   domain: "https://klinikpipa.com",
   phone: "+62 898-9890-071",
   phoneRaw: "+628989890071",
@@ -160,10 +160,10 @@ export const siteConfig = {
       id: "deteksi-pipa-bocor",
       name: "Jasa Deteksi Pipa Bocor & Perbaikan",
       heading: "Jasa Deteksi Pipa Bocor Bandung",
-      subheading: "Cara Mengetahui Kebocoran Pipa Air di Rumah",
-      shortDesc: "Pelacakan akurat jasa deteksi pipa bocor Bandung di dinding/lantai menggunakan sensor akustik & thermal imaging tanpa bobok acak.",
+      subheading: "Pelacakan Akustik & Thermal Tanpa Bobok Keramik",
+      shortDesc: "Pelacakan akurat titik pipa bocor di dinding atau bawah lantai menggunakan sensor akustik & thermal imaging tanpa bobok acak.",
       fullDesc:
-        "Tagihan air melonjak atau tembok sering rembes? Jasa deteksi pipa bocor Bandung melacak posisi pasti pipa bocor halus di bawah lantai beton atau dinding, lalu memperbaiki titiknya tanpa membongkar sembarangan.",
+        "Tagihan air melonjak atau tembok sering rembes? Jasa deteksi pipa bocor Bandung melacak posisi pasti pipa bocor halus di bawah lantai beton atau dinding, lalu memperbaiki titiknya secara presisi tanpa merusak lantai rumah.",
       iconName: "FaSearchLocation",
       price: "Mulai Rp650.000",
       features: [
@@ -176,11 +176,11 @@ export const siteConfig = {
     {
       id: "detox-pipa-kotor",
       name: "Jasa Cuci Detox Pipa Air Bersih",
-      heading: "Detox Pipa Air Bandung",
-      subheading: "Cuci Pipa Air Bersih Tanpa Bahan Kimia",
-      shortDesc: "Detox pipa air Bandung untuk kerak, bio-film, lumpur, dan cacing di instalasi air rumah. Cuci pipa sampai keran jernih.",
+      heading: "Jasa Cuci Detox Pipa Air Bandung",
+      subheading: "Pembersihan Kerak Pipa & Bio-Film Tanpa Bahan Kimia",
+      shortDesc: "Detox pipa air Bandung untuk kuras kerak, bio-film, lumpur, dan cacing di instalasi air rumah. Cuci pipa sampai keran kembali jernih.",
       fullDesc:
-        "Air keran keruh, kuning, berbau, atau mengalir kecil? Detox pipa air Bandung menguras kerak dan kuman di sepanjang pipa air bersih. Cuci pipa ini aman, tanpa kimia berbahaya, dan air bisa langsung dipakai.",
+        "Air keran keruh, kuning, berbau, atau mengalir kecil? Detox pipa air Bandung menguras kerak dan kuman di sepanjang instalasi pipa air bersih. Cuci pipa ini aman, tanpa bahan kimia berbahaya, dan air bisa langsung digunakan.",
       iconName: "FaBroom",
       price: "Mulai Rp450.000",
       features: [
@@ -194,10 +194,10 @@ export const siteConfig = {
       id: "inspeksi-kamera-pipa",
       name: "Inspeksi Visual Kamera Endoskop Pipa",
       heading: "Inspeksi Visual Kamera Endoskop Pipa",
-      subheading: "Lihat Sumbatan dari Dalam Saluran",
-      shortDesc: "Pemeriksaan kondisi dalam pipa menggunakan kamera kabel endoskop HD untuk mendeteksi retakan & kerusakkan.",
+      subheading: "Deteksi Kerusakan & Sumbatan dari Dalam Saluran",
+      shortDesc: "Pemeriksaan kondisi dalam pipa menggunakan kamera kabel endoskop HD untuk mendeteksi retakan, patahan, & sumbatan pipa.",
       fullDesc:
-        "Memvisualisasikan kondisi riil bagian dalam pipa buangan maupun air bersih secara real-time. Mengetahui posisi sumbatan keras, patahan pipa, atau pergeseran sambungan elbow.",
+        "Memvisualisasikan kondisi riil bagian dalam pipa buangan maupun air bersih secara real-time. Mengetahui posisi pasti sumbatan keras, patahan pipa, atau pergeseran sambungan elbow.",
       iconName: "FaEye",
       price: "Mulai Rp150.000",
       features: [
@@ -210,11 +210,11 @@ export const siteConfig = {
     {
       id: "pelancaran-saluran-mampet",
       name: "Jasa Saluran Mampet Bandung Terdekat",
-      heading: "Jasa Saluran Mampet Bandung",
-      subheading: "Jasa Saluran Mampet Terdekat, Siaga 24 Jam",
-      shortDesc: "Jasa saluran mampet Bandung dan jasa saluran mampet terdekat untuk wastafel, WC, got, dan pipa pembuangan 24 jam tanpa bongkar keramik.",
+      heading: "Jasa Saluran Mampet Bandung 24 Jam",
+      subheading: "Pelancaran WC, Wastafel, & Got Tanpa Bongkar Keramik",
+      shortDesc: "Jasa saluran mampet Bandung terdekat untuk pelancaran wastafel, WC, got, dan pipa pembuangan 24 jam tanpa bongkar keramik.",
       fullDesc:
-        "Jasa saluran mampet untuk lemak keras, rambut, dan sampah padat di saluran buangan. Mesin spiral fleksibel membersihkan pipa PVC tanpa merusaknya, dengan garansi tuntas lancar.",
+        "Jasa saluran mampet profesional untuk atasi endapan lemak keras, rambut, dan sampah padat di pipa buangan. Mesin spiral fleksibel membersihkan pipa PVC tanpa merusaknya, dengan garansi tuntas lancar.",
       iconName: "FaTools",
       price: "Mulai Rp150.000",
       features: [

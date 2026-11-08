@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { blogPosts } from "@/lib/blog-data";
 import { siteConfig } from "@/config/site";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { FaClock, FaTag, FaArrowRight, FaBookOpen } from "react-icons/fa";
+import { FaClock, FaTag, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
