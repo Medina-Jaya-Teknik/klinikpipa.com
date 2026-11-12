@@ -68,7 +68,7 @@ export function generateLocalBusinessSchema() {
           "@type": "Person",
           name: "Bambang Sudrajat",
         },
-        datePublished: "2026-08-14",
+        datePublished: "2026-10-18",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
@@ -83,7 +83,7 @@ export function generateLocalBusinessSchema() {
           "@type": "Person",
           name: "Rina Kusuma Dewi",
         },
-        datePublished: "2026-09-02",
+        datePublished: "2026-11-04",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
@@ -98,7 +98,7 @@ export function generateLocalBusinessSchema() {
           "@type": "Person",
           name: "Hendrik Gunawan",
         },
-        datePublished: "2026-09-18",
+        datePublished: "2026-11-10",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
@@ -451,7 +451,7 @@ export function generateProductServiceSchema(data: {
           "@type": "Person",
           name: "Bambang Sudrajat",
         },
-        datePublished: "2026-08-14",
+        datePublished: "2026-10-18",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
@@ -466,7 +466,7 @@ export function generateProductServiceSchema(data: {
           "@type": "Person",
           name: "Rina Kusuma Dewi",
         },
-        datePublished: "2026-09-02",
+        datePublished: "2026-11-04",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
@@ -481,7 +481,7 @@ export function generateProductServiceSchema(data: {
           "@type": "Person",
           name: "Hendrik Gunawan",
         },
-        datePublished: "2026-09-18",
+        datePublished: "2026-11-10",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
