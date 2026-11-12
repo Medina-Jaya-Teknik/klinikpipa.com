@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Layanan & Biaya Deteksi Pipa Bocor, Detox & Saluran Mampet Bandung | Klinik Pipa",
   },
   description:
-    "Katalog layanan lengkap Klinik Pipa Bandung (Update November 2026): deteksi pipa bocor akustik, cuci detox pipa air bersih, & pelancaran saluran mampet 24 jam tanpa bongkar, bergaransi. Hubungi ☎️ 0898-9890-071.",
+    "Katalog layanan lengkap Klinik Pipa Bandung: deteksi pipa bocor akustik, cuci detox pipa air bersih, & pelancaran saluran mampet 24 jam tanpa bongkar, bergaransi. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/layanan`,
   },

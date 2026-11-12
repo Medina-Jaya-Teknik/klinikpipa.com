@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     absolute: "Blog & Tips Pipa Bocor Saluran Mampet Bandung",
   },
   description:
-    "Tips & solusi pipa bocor, cuci detox & saluran mampet 24 jam Bandung (Update November 2026). Panduan teknisi bergaransi. Hubungi ☎️ 0898-9890-071.",
+    "Tips & solusi pipa bocor, cuci detox & saluran mampet 24 jam Bandung. Panduan praktis teknisi bergaransi. Hubungi ☎️ 0898-9890-071.",
   alternates: {
     canonical: `${siteConfig.domain}/blog`,
   },
