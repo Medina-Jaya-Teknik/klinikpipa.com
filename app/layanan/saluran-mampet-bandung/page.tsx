@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     absolute: "Jasa Saluran Mampet Bandung 24 Jam Tanpa Bongkar | Klinik Pipa",
   },
   description:
-    "Pipa WC, wastafel & got mampet tuntas tanpa bongkar keramik! Teknisi tiba 30 menit di Bandung, mesin spiral modern, garansi lancar. Hubungi 24 jam.",
+    "Jasa saluran mampet Bandung terdekat 24 jam tanpa bongkar keramik! WC, wastafel & got tuntas bergaransi. Hubungi ☎️ 0898-9890-071 (Teknisi Siaga).",
   keywords: [
     "jasa saluran mampet bandung",
     "jasa saluran mampet terdekat",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jasa Saluran Mampet Bandung 24 Jam Tanpa Bongkar | Klinik Pipa",
     description:
-      "Pipa WC, wastafel & got mampet tuntas tanpa bongkar keramik! Teknisi tiba 30 menit di Bandung, mesin spiral modern, garansi lancar. Hubungi 24 jam.",
+      "Jasa saluran mampet Bandung terdekat 24 jam tanpa bongkar keramik! WC, wastafel & got tuntas bergaransi. Hubungi ☎️ 0898-9890-071 (Teknisi Siaga).",
     url: `${siteConfig.domain}/layanan/saluran-mampet-bandung`,
     siteName: siteConfig.name,
     locale: "id_ID",
@@ -129,7 +129,7 @@ export default function SaluranMampetBandungPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-36 md:pb-24 bg-gradient-hero-bright text-slate-900 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center lg:text-left">
-          
+
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-900 text-xs font-bold">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Teknisi Siaga 24 Jam Bandung & Sekitarnya</span>
@@ -183,7 +183,7 @@ export default function SaluranMampetBandungPage() {
       {/* Problem Categories Grid */}
       <section className="py-16 md:py-20 bg-white text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 text-xs font-bold uppercase tracking-wider">
               Solusi Tuntas Bergaransi

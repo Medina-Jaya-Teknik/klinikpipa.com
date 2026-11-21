@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
     ? "Jasa Saluran Mampet & Deteksi Pipa Bocor Bandung 24 Jam | Klinik Pipa"
     : `Jasa Saluran Mampet & Pipa Bocor ${areaData.name} 24 Jam | Klinik Pipa`;
 
-  const areaDesc = `Jasa saluran mampet & deteksi pipa bocor 24 jam di ${areaData.name} tanpa bongkar keramik! Mesin spiral & sensor akustik modern bergaransi. Hub: 0898-9890-071.`;
+  const areaDesc = `Jasa saluran mampet & deteksi pipa bocor 24 jam ${areaData.name} tanpa bongkar! Teknisi tiba 30 mnt bergaransi. Hubungi ☎️ 0898-9890-071.`;
 
   return {
     title: {
@@ -98,7 +98,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
       {/* Hero Header Area */}
       <section className="pt-32 pb-16 bg-gradient-hero-bright text-slate-900 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center lg:text-left">
-          
+
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-900 text-xs font-bold">
             <FaMapMarkerAlt />
             <span>Pos Layanan Prioritas: {areaData.name}, Bandung</span>
@@ -139,7 +139,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
       {/* Special Area Content */}
       <section className="py-16 bg-white text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center">
@@ -232,11 +232,10 @@ export default async function AreaPage({ params }: AreaPageProps) {
                 <Link
                   key={otherArea.slug}
                   href={`/kota/${otherArea.slug}`}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
-                    otherArea.slug === areaData.slug
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all ${otherArea.slug === areaData.slug
                       ? "bg-emerald-600 text-white border-emerald-600 shadow-sm"
                       : "bg-slate-100 hover:bg-sky-100 text-slate-700 hover:text-sky-800 border-slate-200"
-                  }`}
+                    }`}
                 >
                   {otherArea.name}
                 </Link>

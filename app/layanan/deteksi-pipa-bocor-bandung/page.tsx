@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     absolute: "Jasa Deteksi Pipa Bocor Bandung Akurat Tanpa Bobok | Klinik Pipa",
   },
   description:
-    "Tagihan air melonjak atau tembok rembes? Deteksi titik pipa bocor akurat 99% pakai sensor akustik & thermal tanpa bobok acak di Bandung. Bergaransi!",
+    "Jasa deteksi pipa bocor Bandung akurat 99% sensor akustik & thermal tanpa bobok acak! Solusi tagihan air melonjak. Hubungi ☎️ 0898-9890-071.",
   keywords: [
     "jasa deteksi pipa bocor bandung",
     "deteksi pipa bocor bandung",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jasa Deteksi Pipa Bocor Bandung Akurat Tanpa Bobok | Klinik Pipa",
     description:
-      "Tagihan air melonjak atau tembok rembes? Deteksi titik pipa bocor akurat 99% pakai sensor akustik & thermal tanpa bobok acak di Bandung. Bergaransi!",
+      "Jasa deteksi pipa bocor Bandung akurat 99% sensor akustik & thermal tanpa bobok acak! Solusi tagihan air melonjak. Hubungi ☎️ 0898-9890-071.",
     url: `${siteConfig.domain}/layanan/deteksi-pipa-bocor-bandung`,
     siteName: siteConfig.name,
     locale: "id_ID",

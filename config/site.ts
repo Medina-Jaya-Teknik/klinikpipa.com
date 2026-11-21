@@ -22,7 +22,7 @@ export const siteConfig = {
   legalName: "Klinik Pipa Bandung",
   tagline: "Solusi pipa bocor, pipa kotor dan pipa mampet",
   description:
-    "Jasa deteksi pipa bocor, cuci detox & saluran mampet 24 jam Bandung tanpa bongkar, bergaransi. Ahli mampet terdekat & cuci pipa air bersih. Hubungi ☎️ 0898-9890-071.",
+    "Jasa saluran mampet & deteksi pipa bocor 24 jam Bandung tanpa bongkar, teknisi tiba 30 menit bergaransi! Siaga darurat ☎️ 0898-9890-071.",
   domain: "https://klinikpipa.com",
   phone: "+62 898-9890-071",
   phoneRaw: "+628989890071",
