@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { FaCheckCircle, FaWhatsapp, FaPhoneAlt, FaTools } from "react-icons/fa";
@@ -121,6 +122,23 @@ export default function LayananPage() {
                       <FaPhoneAlt className="text-sky-600" />
                       <span>{siteConfig.phone}</span>
                     </a>
+
+                    {service.id === "pelancaran-saluran-mampet" && (
+                      <Link
+                        href="/layanan/saluran-mampet-bandung"
+                        className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold text-xs border border-blue-200 shadow-xs transition-all"
+                      >
+                        <span>Rincian Lengkap & Biaya Mampet &rarr;</span>
+                      </Link>
+                    )}
+                    {service.id === "deteksi-pipa-bocor" && (
+                      <Link
+                        href="/layanan/deteksi-pipa-bocor-bandung"
+                        className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 font-bold text-xs border border-sky-200 shadow-xs transition-all"
+                      >
+                        <span>Rincian Lengkap & Biaya Deteksi Bocor &rarr;</span>
+                      </Link>
+                    )}
                   </div>
                 </div>
 

@@ -29,8 +29,11 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
     };
   }
 
-  const areaTitle = `Jasa Pipa Bocor & Saluran Mampet ${areaData.name} - 24 Jam`;
-  const areaDesc = `Jasa pipa bocor & saluran mampet 24 jam ${areaData.name} tanpa bongkar, garansi. Hubungi ☎️ 0898-9890-071.`;
+  const areaTitle = areaData.slug === "bandung"
+    ? "Jasa Saluran Mampet & Deteksi Pipa Bocor Bandung 24 Jam | Klinik Pipa"
+    : `Jasa Saluran Mampet & Pipa Bocor ${areaData.name} 24 Jam | Klinik Pipa`;
+
+  const areaDesc = `Jasa saluran mampet & deteksi pipa bocor 24 jam di ${areaData.name} tanpa bongkar keramik! Mesin spiral & sensor akustik modern bergaransi. Hub: 0898-9890-071.`;
 
   return {
     title: {

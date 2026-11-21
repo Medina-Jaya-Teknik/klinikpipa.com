@@ -26,6 +26,13 @@ export default function ServiceSection() {
     "pelancaran-saluran-mampet": "/images/layanan-saluran-mampet.webp",
   };
 
+  const serviceLinkMap: Record<string, string> = {
+    "deteksi-pipa-bocor": "/layanan/deteksi-pipa-bocor-bandung",
+    "pelancaran-saluran-mampet": "/layanan/saluran-mampet-bandung",
+    "detox-pipa-kotor": "/layanan",
+    "inspeksi-kamera-pipa": "/layanan",
+  };
+
   return (
     <section id="layanan" className="py-16 md:py-24 bg-slate-50 text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,10 +122,16 @@ export default function ServiceSection() {
                   </a>
 
                   <Link
-                    href="/layanan"
-                    className="w-full flex items-center justify-center gap-1 py-2 text-[11px] font-semibold text-slate-500 hover:text-sky-600 transition-colors"
+                    href={serviceLinkMap[service.id] || "/layanan"}
+                    className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-bold text-sky-700 hover:text-sky-900 hover:underline transition-colors"
                   >
-                    <span>Detail Layanan</span>
+                    <span>
+                      {service.id === "pelancaran-saluran-mampet"
+                        ? "Jasa Saluran Mampet Bandung"
+                        : service.id === "deteksi-pipa-bocor"
+                        ? "Jasa Deteksi Pipa Bocor Bandung"
+                        : "Pelajari Rincian Layanan"}
+                    </span>
                     <FaArrowRight className="text-[10px]" />
                   </Link>
                 </div>
