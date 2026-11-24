@@ -44,4 +44,3 @@ next-env.d.ts
 .vercel
 package-lock.json
 ecosystem.config.js
-sftp-config.json

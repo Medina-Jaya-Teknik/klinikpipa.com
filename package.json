@@ -7,7 +7,6 @@
     "build": "next build",
     "postbuild": "node scripts/indexnow.js",
     "start": "next start",
-    "deploy": "node scripts/deploy.js",
     "lint": "eslint",
     "seo-bot": "node scripts/seo-bot.js",
     "seo-test": "node scripts/seo-bot.js --test"
