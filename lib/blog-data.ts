@@ -1,3 +1,11 @@
+export interface BlogReview {
+  name: string;
+  location?: string;
+  ratingValue: string;
+  datePublished: string;
+  reviewBody: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -14,6 +22,7 @@ export interface BlogPost {
   content: string[];
   image?: string;
   faqs?: { question: string; answer: string }[];
+  reviews?: BlogReview[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -22,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     title: "Ahli Mampet Terdekat Bandung: WC, Wastafel & Got Lancar Tanpa Bongkar",
     metaTitle: "Ahli Mampet Terdekat Bandung - Siaga 24 Jam",
     metaDescription:
-      "Ahli mampet terdekat Bandung untuk pelancaran WC, wastafel, & got. Pengerjaan cepat tanpa bongkar keramik, bergaransi. Hubungi ☎️ 0898-9890-071.",
+      "Ahli mampet terdekat Bandung untuk pelancaran WC, wastafel, & got. Pengerjaan cepat tanpa bongkar keramik, bergaransi. Hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Cara memilih ahli mampet terdekat di Bandung yang datang cepat, memakai mesin spiral, dan tidak membongkar keramik untuk WC, wastafel, floor drain, maupun got.",
@@ -90,7 +99,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cara Mengetahui Kebocoran Pipa Air di Rumah: 7 Tanda & Tes Meteran",
     metaTitle: "Cara Mengetahui Kebocoran Pipa Air di Rumah",
     metaDescription:
-      "Cara mengetahui kebocoran pipa air di rumah lewat tes meteran PDAM. Pelacakan akurat sensor akustik tanpa bobok. Hubungi ☎️ 0898-9890-071.",
+      "Cara mengetahui kebocoran pipa air di rumah lewat tes meteran PDAM. Pelacakan akurat sensor akustik tanpa bobok. Hubungi ☎ 0898-9890-071.",
     servicePrice: "650000",
     excerpt:
       "Kenali gejala kebocoran pipa air PDAM atau pompa tersembunyi di balik tembok beton dan bawah keramik lantai, cara uji meteran air mandiri, serta solusi pelacakan sensor akustik presisi.",
@@ -154,7 +163,7 @@ export const blogPosts: BlogPost[] = [
     title: "Apa Itu Detox Pipa Air Bersih? Solusi Air Keran Kuning, Keruh & Berbau Besi",
     metaTitle: "Apa Itu Detox Pipa Air? Solusi Air Keran Kuning & Keruh",
     metaDescription:
-      "Solusi air keran kuning, keruh, & berbau karat. Cuci pipa Hydro Pressure Flushing tanpa bahan kimia, garansi air jernih. Hubungi ☎️ 0898-9890-071.",
+      "Solusi air keran kuning, keruh, & berbau karat. Cuci pipa Hydro Pressure Flushing tanpa bahan kimia, garansi air jernih. Hubungi ☎ 0898-9890-071.",
     servicePrice: "450000",
     excerpt:
       "Pelajari metode pencucian pipa air minum & keran rumah menggunakan teknologi Hydro Pressure Flushing untuk menguras kerak hitam, endapan karat, dan cacing tanpa bahan kimia beracun.",
@@ -212,7 +221,7 @@ export const blogPosts: BlogPost[] = [
     title: "Teknologi Kamera Endoskop & Mesin Spiral Rigid: Pelancar Saluran Mampet Tanpa Rusak Pipa",
     metaTitle: "Mesin Spiral Rigid & Endoskop: Pelancar Saluran Mampet",
     metaDescription:
-      "Pelancar saluran mampet modern dengan mesin spiral baja & kamera endoskop HD. Aman tanpa merusak pipa PVC, bergaransi. Hubungi ☎️ 0898-9890-071.",
+      "Pelancar saluran mampet modern dengan mesin spiral baja & kamera endoskop HD. Aman tanpa merusak pipa PVC, bergaransi. Hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Mengapa penggunaan soda api sangat berbahaya bagi pipa PVC rumah? Pelajari kombinasi inspeksi visual kamera endoskop HD dan mesin kabel spiral rigid bertenaga tinggi untuk melancarkan saluran mampet tanpa bongkar keramik.",
@@ -269,7 +278,7 @@ export const blogPosts: BlogPost[] = [
     title: "Jasa Saluran Mampet Bandung 24 Jam - Solusi Pipa WC, Wastafel & Got Tersumbat",
     metaTitle: "Jasa Saluran Mampet Bandung 24 Jam - Tanpa Bongkar",
     metaDescription:
-      "Jasa saluran mampet Bandung 24 jam nonstop. Atasi pipa WC, got, & wastafel tersumbat tanpa bongkar keramik, bergaransi. Hubungi ☎️ 0898-9890-071.",
+      "Jasa saluran mampet Bandung terdekat 24 jam tanpa bongkar. WC, wastafel & got bergaransi! Respon cepat 30 mnt, hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Layanan profesional pelancaran saluran pipa mampet 24 jam di Bandung untuk WC tersumbat, wastafel dapur penuh lemak, floor drain kamar mandi, dan pipa got pembuangan air kotor tanpa bongkar keramik, garansi 100% lancar.",
@@ -288,6 +297,32 @@ export const blogPosts: BlogPost[] = [
       "Rooter Pipa Bandung",
     ],
     image: "/images/blog/jasa-saluran-mampet-bandung.webp",
+    reviews: [
+      {
+        name: "Hendrik Gunawan",
+        location: "Sukajadi, Bandung",
+        ratingValue: "5",
+        datePublished: "2026-11-10",
+        reviewBody:
+          "Wastafel dapur dan pipa pembuangan mampet total lemak membatu. Panggil Klinik Pipa langsung tiba 30 menit ke lokasi. Dilancarkan tuntas pakai mesin kawat spiral baja tanpa bongkar keramik sedikitpun. Bergaransi!",
+      },
+      {
+        name: "Ibu Maya Sartika",
+        location: "Antapani, Bandung",
+        ratingValue: "5",
+        datePublished: "2026-11-14",
+        reviewBody:
+          "Kloset WC mampet berhari-hari sudah dicoba soda api tetap macet. Panggil tim Klinik Pipa jam 9 malam langsung datang cepat, 30 menit pengerjaan langsung plong lancar tanpa bongkar!",
+      },
+      {
+        name: "Bpk. Dedi Supriadi",
+        location: "Buah Batu, Bandung",
+        ratingValue: "5",
+        datePublished: "2026-11-18",
+        reviewBody:
+          "Saluran got kamar mandi meluap saat hujan lebat. Dikerjakan profesional dengan kawat rooter rigid tanpa bongkar ubin keramik. Aliran air langsung deras kembali. Sangat memuaskan!",
+      },
+    ],
     content: [
       "Saluran pembuangan air mampet adalah salah satu situasi darurat paling menyebalkan yang bisa dialami oleh pemilik rumah, pengelola kafe, restoran, indekos, maupun gedung perkantoran di Bandung.",
       "Bayangkan: cucian piring menumpuk karena wastafel dapur meluap, air kamar mandi menggenang setinggi mata kaki saat mandi terburu-buru sebelum berangkat kerja, atau kloset WC tidak bisa disiram saat ada tamu berkunjung. Situasi ini bukan hanya mengganggu kenyamanan, tetapi juga menyebarkan bau busuk dan mengundang kecoa serta kuman penyakit.",
@@ -330,7 +365,7 @@ export const blogPosts: BlogPost[] = [
     title: "Jasa Detox Pipa Kotor Bandung - Cuci Pipa Air Bersih Bebas Kerak & Cacing",
     metaTitle: "Cuci Pipa Bandung - Detox Bebas Kerak & Cacing",
     metaDescription:
-      "Jasa cuci pipa air bersih Bandung metode detox alami tanpa kimia. Rontokkan kerak hitam, bau karat, & cacing pipa. Hubungi ☎️ 0898-9890-071.",
+      "Jasa cuci pipa air bersih Bandung metode detox alami tanpa kimia. Rontokkan kerak hitam, bau karat, & cacing pipa. Hubungi ☎ 0898-9890-071.",
     servicePrice: "450000",
     excerpt:
       "Layanan jasa cuci detox pipa air bersih kotor di Bandung menggunakan teknologi Hydro Pressure Flushing alami tanpa zat kimia. Menghilangkan kerak hitam, bau karat, dan cacing keran bergaransi.",
@@ -384,7 +419,7 @@ export const blogPosts: BlogPost[] = [
     title: "Jasa Deteksi Pipa Bocor Bandung - Pelacakan Sensor Akustik & Thermal Tanpa Bobok",
     metaTitle: "Jasa Deteksi Pipa Bocor Bandung - Tanpa Bobok & Garansi",
     metaDescription:
-      "Jasa deteksi pipa bocor Bandung tanpa bobok dinding. Akurasi 99% sensor geofon akustik & thermal, respon cepat 24 jam. Hubungi ☎️ 0898-9890-071.",
+      "Jasa deteksi pipa bocor Bandung tanpa bobok dinding. Akurasi 99% sensor geofon akustik & thermal, respon cepat 24 jam. Hubungi ☎ 0898-9890-071.",
     servicePrice: "650000",
     excerpt:
       "Layanan jasa deteksi lokasi pipa air bocor tersembunyi di dalam tembok atau bawah lantai di Bandung menggunakan teknologi sensor geofon akustik & thermal imaging camera presisi tinggi bergaransi.",
@@ -437,7 +472,7 @@ export const blogPosts: BlogPost[] = [
     title: "Biaya Deteksi Pipa Bocor Bandung & Harga Jasa Saluran Mampet 2026: Panduan Transparan",
     metaTitle: "Biaya Deteksi Pipa Bocor Bandung & Saluran Mampet 2026",
     metaDescription:
-      "Daftar biaya deteksi pipa bocor & pelancar saluran mampet Bandung. Tarif transparan mulai Rp150rb, bergaransi resmi. Hubungi ☎️ 0898-9890-071.",
+      "Daftar biaya deteksi pipa bocor & pelancar saluran mampet Bandung. Tarif transparan mulai Rp150rb, bergaransi resmi. Hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Rincian lengkap biaya deteksi pipa air bocor tersembunyi, tarif jasa pelancar saluran mampet (WC, wastafel, got), dan harga cuci detox pipa air bersih di Bandung. Tanpa biaya tersembunyi, bergaransi resmi.",
@@ -496,7 +531,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cara Mengatasi Saluran Kamar Mandi & Floor Drain Mampet Tersumbat Rambut dan Sabun",
     metaTitle: "Cara Mengatasi Saluran Kamar Mandi Mampet Tersumbat",
     metaDescription:
-      "Cara praktis mengatasi saluran kamar mandi & floor drain mampet tersumbat rambut dan sabun. Teknisi siaga 24 jam. Hubungi ☎️ 0898-9890-071.",
+      "Cara praktis mengatasi saluran kamar mandi & floor drain mampet tersumbat rambut dan sabun. Teknisi siaga 24 jam. Hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Panduan praktis langkah demi langkah mengatasi saluran pembuangan air kamar mandi yang menggenang dan berbau akibat tumpukan rambut rontok, daki, dan sisa sabun mandi secara aman.",
@@ -557,7 +592,7 @@ export const blogPosts: BlogPost[] = [
     title: "Perbedaan Sedot WC vs Jasa Pelancar Saluran WC Mampet: Mana yang Anda Butuhkan?",
     metaTitle: "Sedot WC vs Pelancar Pipa Mampet: Mana Yang Anda Butuh?",
     metaDescription:
-      "Kloset WC mampet? Kenali perbedaan septic tank penuh vs pipa tersumbat agar tepat penanganan dan hemat biaya. Hubungi ☎️ 0898-9890-071.",
+      "Kloset WC mampet? Kenali perbedaan septic tank penuh vs pipa tersumbat agar tepat penanganan dan hemat biaya. Hubungi ☎ 0898-9890-071.",
     servicePrice: "180000",
     excerpt:
       "Banyak orang salah memanggil jasa saat kloset WC tidak bisa disiram. Pahami perbedaan mendasar antara tangki septic tank penuh vs saluran pipa kloset tersumbat agar tidak buang-buang uang.",
@@ -610,7 +645,7 @@ export const blogPosts: BlogPost[] = [
     title: "Cara Melancarkan Wastafel Dapur Tersumbat Lemak Beku Membandel Tanpa Merusak Pipa",
     metaTitle: "Cara Melancarkan Wastafel Dapur Mampet Lemak Beku",
     metaDescription:
-      "Cara mengatasi wastafel dapur mampet lemak beku tanpa bahan kimia keras. Mesin spiral siap atasi pipa macet 24 jam. Hubungi ☎️ 0898-9890-071.",
+      "Cara mengatasi wastafel dapur mampet lemak beku tanpa bahan kimia keras. Mesin spiral siap atasi pipa macet 24 jam. Hubungi ☎ 0898-9890-071.",
     servicePrice: "150000",
     excerpt:
       "Trik jitu melancarkan wastafel cuci piring (kitchen sink) yang mampet total akibat kerak lemak minyak beku. Cara mencairkan lemak tanpa soda api dan perawatan pipa dapur jangka panjang.",

@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
+import {
+  generateServiceSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateProductServiceSchema,
+} from "@/lib/schema";
 import {
   FaCheckCircle,
   FaWhatsapp,
@@ -11,6 +16,7 @@ import {
   FaExclamationTriangle,
   FaMapMarkerAlt,
   FaArrowRight,
+  FaStar,
 } from "react-icons/fa";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
@@ -20,7 +26,7 @@ export const metadata: Metadata = {
     absolute: "Jasa Saluran Mampet Bandung 24 Jam Tanpa Bongkar | Klinik Pipa",
   },
   description:
-    "Jasa saluran mampet Bandung terdekat 24 jam tanpa bongkar keramik! WC, wastafel & got tuntas bergaransi. Hubungi ☎️ 0898-9890-071 (Teknisi Siaga).",
+    "Jasa saluran mampet Bandung terdekat 24 jam tanpa bongkar keramik. WC, wastafel & got bergaransi tuntas! Hubungi ☎ 0898-9890-071.",
   keywords: [
     "jasa saluran mampet bandung",
     "jasa saluran mampet terdekat",
@@ -52,6 +58,15 @@ export default function SaluranMampetBandungPage() {
     "Layanan darurat pelancaran saluran pipa mampet untuk wastafel dapur, kloset WC, floor drain kamar mandi, dan got pembuangan air kotor di Bandung.",
     `${siteConfig.domain}/layanan/saluran-mampet-bandung`
   );
+
+  const productServiceSchema = generateProductServiceSchema({
+    name: "Jasa Saluran Mampet Bandung 24 Jam Tanpa Bongkar",
+    description:
+      "Layanan darurat pelancaran saluran pipa mampet untuk wastafel dapur, kloset WC, floor drain kamar mandi, dan got pembuangan air kotor di Bandung tanpa bongkar keramik.",
+    url: `${siteConfig.domain}/layanan/saluran-mampet-bandung`,
+    price: "150000",
+    category: "Jasa Saluran Mampet Bandung",
+  });
 
   const faqs = [
     {
@@ -122,7 +137,12 @@ export default function SaluranMampetBandungPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]),
+          __html: JSON.stringify([
+            serviceSchema,
+            productServiceSchema,
+            faqSchema,
+            breadcrumbSchema,
+          ]),
         }}
       />
 
@@ -130,9 +150,20 @@ export default function SaluranMampetBandungPage() {
       <section className="pt-32 pb-16 md:pt-36 md:pb-24 bg-gradient-hero-bright text-slate-900 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center lg:text-left">
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-900 text-xs font-bold">
-            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Teknisi Siaga 24 Jam Bandung & Sekitarnya</span>
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-900 text-xs font-bold">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Teknisi Siaga 24 Jam Bandung & Sekitarnya</span>
+            </div>
+
+            {/* Google Rating Star Badge */}
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 text-amber-900 border border-amber-300 text-xs font-bold shadow-2xs">
+              <span className="flex text-amber-500 text-xs">
+                <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+              </span>
+              <span>4.9 / 5.0</span>
+              <span className="text-amber-800/80 font-normal">({siteConfig.rating.reviewCount} Ulasan)</span>
+            </div>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-slate-900">

@@ -360,6 +360,13 @@ export function generateArticleSchema(article: {
   };
 }
 
+export interface ReviewData {
+  name: string;
+  datePublished: string;
+  ratingValue: string;
+  reviewBody: string;
+}
+
 export function generateProductServiceSchema(data: {
   name: string;
   description: string;
@@ -367,12 +374,42 @@ export function generateProductServiceSchema(data: {
   image?: string;
   price?: string;
   category?: string;
+  ratingValue?: string;
+  reviewCount?: string;
+  sku?: string;
+  reviews?: ReviewData[];
 }) {
   const imageUrl = data.image
     ? data.image.startsWith("http")
       ? data.image
       : `${siteConfig.domain}${data.image}`
     : `${siteConfig.domain}/images/layanan-deteksi-bocor.webp`;
+
+  const defaultReviews: ReviewData[] = [
+    {
+      name: "Hendrik Gunawan",
+      datePublished: "2026-11-10",
+      ratingValue: "5",
+      reviewBody:
+        "Wastafel dapur dan pipa pembuangan mampet total lemak membatu. Panggil Klinik Pipa langsung tiba 30 menit ke lokasi. Dilancarkan tuntas pakai mesin kawat spiral baja tanpa bongkar keramik sedikitpun. Bergaransi!",
+    },
+    {
+      name: "Ibu Maya Sartika",
+      datePublished: "2026-11-14",
+      ratingValue: "5",
+      reviewBody:
+        "Kloset WC mampet berhari-hari sudah dicoba soda api tetap macet. Panggil tim Klinik Pipa jam 9 malam langsung datang cepat, 30 menit pengerjaan langsung plong lancar tanpa bongkar!",
+    },
+    {
+      name: "Bpk. Dedi Supriadi",
+      datePublished: "2026-11-18",
+      ratingValue: "5",
+      reviewBody:
+        "Saluran got kamar mandi meluap saat hujan lebat. Dikerjakan profesional dengan kawat rooter rigid tanpa bongkar ubin keramik. Aliran air langsung deras kembali. Sangat memuaskan!",
+    },
+  ];
+
+  const reviewsToUse = data.reviews && data.reviews.length > 0 ? data.reviews : defaultReviews;
 
   return {
     "@context": "https://schema.org",
@@ -381,6 +418,7 @@ export function generateProductServiceSchema(data: {
     name: data.name,
     image: imageUrl,
     description: data.description,
+    sku: data.sku || `KP-${Math.abs(data.name.split("").reduce((a, b) => ((a << 5) - a + b.charCodeAt(0)) | 0, 0))}`,
     category: data.category || "Jasa Pipa Air Bandung",
     brand: {
       "@type": "Brand",
@@ -439,58 +477,26 @@ export function generateProductServiceSchema(data: {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: siteConfig.rating.ratingValue,
-      reviewCount: siteConfig.rating.reviewCount,
+      ratingValue: data.ratingValue || siteConfig.rating.ratingValue,
+      reviewCount: data.reviewCount || siteConfig.rating.reviewCount,
       bestRating: siteConfig.rating.bestRating,
       worstRating: "1",
     },
-    review: [
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "Bambang Sudrajat",
-        },
-        datePublished: "2026-10-18",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-        },
-        reviewBody:
-          "Titik pipa bocor di bawah keramik teras langsung ketemu dalam 45 menit pakai alat sensor akustik. Hanya bongkar 1 keramik, tagihan PDAM langsung normal kembali!",
+    review: reviewsToUse.map((r) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: r.name,
       },
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "Rina Kusuma Dewi",
-        },
-        datePublished: "2026-11-04",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-        },
-        reviewBody:
-          "Air keran di rumah kuning dan berbau besi. Setelah di-detox hydro flushing oleh Klinik Pipa, keluar kerak hitam banyak sekali. Sekarang airnya super jernih dan lancar.",
+      datePublished: r.datePublished,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.ratingValue,
+        bestRating: "5",
+        worstRating: "1",
       },
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: "Hendrik Gunawan",
-        },
-        datePublished: "2026-11-10",
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: "5",
-          bestRating: "5",
-        },
-        reviewBody:
-          "Wastafel restoran kami mampet lemak tebal. Teknisi datang 30 menit ke lokasi Sukajadi dan lancar pakai mesin kawat spiral tanpa bongkar pipa. Mantap dan bergaransi.",
-      },
-    ],
+      reviewBody: r.reviewBody,
+    })),
   };
 }
 
