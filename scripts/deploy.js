@@ -61,9 +61,9 @@ conn.on('ready', () => {
   console.log('✅ Terhubung ke VPS! Menjalankan proses build & restart PM2...\n');
 
   const remoteCommands = [
-    'export NVM_DIR="$HOME/.nvm"',
-    '[ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"',
     `cd ${config.remote_path || '/var/www/klinikpipa.com'}`,
+    'export NVM_DIR="$HOME/.nvm"',
+    '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"',
     'echo "📥 [VPS] Menarik update dari GitHub..."',
     'git fetch origin main',
     'git reset --hard origin/main',
@@ -72,6 +72,7 @@ conn.on('ready', () => {
     'echo "⏸️ [VPS] Menghentikan sementara proses PM2 untuk build bersih (hemat RAM)..."',
     'pm2 stop klinikpipa || true',
     'echo "🏗️ [VPS] Membuild aplikasi Next.js..."',
+    'export NODE_OPTIONS=--max-old-space-size=1536',
     'npm run build',
     'echo "▶️ [VPS] Menjalankan kembali aplikasi PM2..."',
     'pm2 restart klinikpipa || pm2 start ecosystem.config.js',
